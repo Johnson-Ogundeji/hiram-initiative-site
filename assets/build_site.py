@@ -233,21 +233,22 @@ def icon(key, color=None):
     c = f' style="color:{color}"' if color else ""
     return f'<svg width="28" height="28" viewBox="0 0 24 24"{c}>{g}</svg>'
 
-# THI mark — a simplified maze-style "TH" monogram echoing the constitution
-# header logo. Designed to scale clean at any size.
-def thi_mark(size=44, fg=INK, accent=ACCENT):
-    return (f'<svg viewBox="0 0 120 120" width="{size}" height="{size}" aria-label="The Hiram Initiative" role="img">'
-            f'<rect x="6" y="6" width="108" height="108" rx="6" fill="{fg}"/>'
-            # Big T (left, white strokes on dark)
-            f'<rect x="20" y="22" width="44" height="8" fill="white"/>'
-            f'<rect x="38" y="22" width="8" height="76" fill="white"/>'
-            # H (right, interlocking)
-            f'<rect x="68" y="22" width="8" height="76" fill="white"/>'
-            f'<rect x="96" y="22" width="8" height="76" fill="white"/>'
-            f'<rect x="68" y="56" width="36" height="8" fill="white"/>'
-            # Orange accent dot — the spark
-            f'<circle cx="100" cy="22" r="6" fill="{accent}"/>'
-            f'</svg>')
+# THI mark — the official logo, sourced from the JPEG provided by the
+# committee (assets/thi-logo.jpeg). Used at varying sizes across the site.
+# `inverted=True` adds a white tile behind the logo for use on dark surfaces
+# (navbar, footer, dark sections) so the satin background reads as intentional.
+LOGO_PATH = "assets/thi-logo.jpeg"
+
+def thi_mark(size=44, inverted=False):
+    # On dark surfaces, give the JPEG a white tile + small inset so the
+    # silk background frames cleanly as a brand card.
+    if inverted:
+        style = (f'width:{size}px;height:{size}px;background:#fff;border-radius:6px;'
+                 f'padding:3px;box-sizing:border-box;display:block')
+    else:
+        style = f'width:{size}px;height:{size}px;display:block'
+    return (f'<img src="{LOGO_PATH}" alt="The Hiram Initiative" '
+            f'style="{style}">')
 
 # ---------------------------------------------------------------------------
 # Shared HTML scaffolding
@@ -262,7 +263,8 @@ def head(title, desc):
 <meta property="og:description" content="{desc}">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="{ACCENT}">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,{thi_mark(64).replace('#','%23').replace('"','%22')}">
+<link rel="icon" type="image/jpeg" href="{LOGO_PATH}">
+<link rel="apple-touch-icon" href="{LOGO_PATH}">
 <style>{css()}</style>
 </head>"""
 
@@ -419,7 +421,7 @@ def navbar(active=""):
     ]
     rendered = "".join(f'<a href="{slug}.html"{cls(slug)}>{label}</a>' for slug, _, label in links)
     return f"""<header class="nav"><div class="wrap">
-<a class="brand" href="index.html">{thi_mark(36)} <span>The Hiram<span class="bsub">Initiative</span></span></a>
+<a class="brand" href="index.html">{thi_mark(40, inverted=True)} <span>The Hiram<span class="bsub">Initiative</span></span></a>
 <button class="navtoggle" aria-label="Menu" onclick="document.getElementById('nl').classList.toggle('open')">≡</button>
 <nav class="navlinks" id="nl">{rendered}
 <a class="cta" href="contact.html">Get involved</a>
@@ -437,7 +439,7 @@ def footer():
     pillar_links = "".join(f'<li><a href="{p["slug"]}.html">{p["short"]}</a></li>' for p in PILLARS)
     return f"""<footer><div class="wrap">
 <div class="fgrid">
-  <div>{thi_mark(40, fg="#fff", accent=ACCENT)}
+  <div>{thi_mark(64, inverted=True)}
     <h5 style="margin-top:14px">The Hiram Initiative</h5>
     <p>{ORG['tagline']}</p>
     <p style="margin-top:14px">A community of young people in the United Kingdom who aren't waiting for opportunities — they're creating them.</p>
