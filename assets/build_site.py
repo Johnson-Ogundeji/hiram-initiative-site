@@ -476,6 +476,13 @@ def page(fname, title, desc, body, active=""):
     slug = fname[:-5]
     canon = f"https://{ORG['website']}/" + ("" if slug == "index" else slug)
     out = out.replace("</head>", f'<link rel="canonical" href="{canon}">\n<meta property="og:url" content="{canon}"></head>', 1)
+    # Clean URLs: drop .html from every internal page link. The files on disk
+    # stay flat (about.html etc.); GitHub Pages serves /about from about.html
+    # natively. Skips external (has "://"), mailto, asset paths (.jpeg/.png/
+    # .svg/.css/.js — those have no .html), and bare anchors.
+    out = re.sub(r'href="index\.html(#[^"]*)?"',
+                 lambda m: f'href="/{m.group(1) or ""}"', out)
+    out = re.sub(r'href="([a-z0-9][a-z0-9-]*)\.html(#[^"]*)?"', r'href="\1\2"', out)
     with open(os.path.join(SITE, fname), "w") as f:
         f.write(out)
 
