@@ -56,9 +56,10 @@ MUTED       = "#5A5A5A"
 COMMITTEE = [
     ("Johnson Ogundeji", "Chairperson", "Overall leadership and strategic direction; 2026 roadmap; partnerships strategy."),
     ("Joseph Falano",    "Secretary",   "Administration, records, communications; Expert Speaker Series; Mentorship Matching programme."),
-    ("Victor Emovon",    "Treasurer",   "Financial management and reporting; mentorship operations. Appointed 13 April 2026 for an initial three-year term."),
+    ("Daniel Dickson",   "Treasurer",   "Financial management and reporting, in accordance with Section 4.2 of the constitution."),
 ]
 VOLUNTEERS = [
+    ("Victor Emovon",   "Mentorship matching — operating the One-to-One Mentorship Matching programme that pairs members with industry practitioners"),
     ("David Tetede",    "Career pathways · technology-sector accountability"),
     ("Bankole Olamide", "Awareness and representation for excluded communities"),
 ]
