@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-The Hiram Initiative — static site generator.
+The Hiram Initiative, static site generator.
 
 Renders the website/ directory from content sourced directly from
 the constitution (adopted 13 May 2026), the AGM minutes (13 April 2026),
@@ -39,7 +39,7 @@ ORG = {
     "year":      datetime.date.today().year,
 }
 
-# Colour palette — sampled from the constitution and Frontier Fusion poster.
+# Colour palette, sampled from the constitution and Frontier Fusion poster.
 INK         = "#1A1A1A"   # near-black headers
 ACCENT      = "#E67A2C"   # primary orange (constitution header rules)
 ACCENT_DARK = "#B8581A"   # deeper orange for hover / pressed
@@ -51,7 +51,7 @@ PAPER       = "#FFFFFF"
 MUTED       = "#5A5A5A"
 
 # ---------------------------------------------------------------------------
-# Content — sourced directly from constitution / AGM / poster
+# Content, sourced directly from constitution / AGM / poster
 # ---------------------------------------------------------------------------
 COMMITTEE = [
     ("Johnson Ogundeji", "Chairperson", "Overall leadership and strategic direction; 2026 roadmap; partnerships strategy."),
@@ -59,7 +59,7 @@ COMMITTEE = [
     ("Daniel Dickson",   "Treasurer",   "Financial management and reporting, in accordance with Section 4.2 of the constitution."),
 ]
 VOLUNTEERS = [
-    ("Victor Emovon",   "Mentorship matching — operating the One-to-One Mentorship Matching programme that pairs members with industry practitioners"),
+    ("Victor Emovon",   "Mentorship matching, operating the One-to-One Mentorship Matching programme that pairs members with industry practitioners"),
     ("David Tetede",    "Career pathways · technology-sector accountability"),
     ("Bankole Olamide", "Awareness and representation for excluded communities"),
 ]
@@ -73,7 +73,7 @@ PILLARS = [
         "tagline": "The foundational digital skills every modern workplace expects.",
         "points": [
             ("Accessible IT training",         "Foundational digital skills required in every modern workplace and business."),
-            ("Inclusive curriculum",            "Introductions into AI concepts, digital literacy and practical technology skills, designed for those most at risk from technological change — including underrepresented and minority communities."),
+            ("Inclusive curriculum",            "Introductions into AI concepts, digital literacy and practical technology skills, designed for those most at risk from technological change, including underrepresented and minority communities."),
             ("Hands-on workshops",              "Educational exhibits, seminars and labs that show different aspects of IT across employment, with practical materials participants can apply immediately."),
             ("Targeted, measurable delivery",   "Clear objectives, plain-language formats, highlighting how society is being impacted by IT and how young people can position themselves to benefit."),
         ],
@@ -86,7 +86,7 @@ PILLARS = [
         "tagline": "Practical AI for real careers, real income, real impact.",
         "points": [
             ("Practical AI education",     "Real-world applications, ethical considerations, prompt engineering, AI tools and the emerging career and income opportunities AI is creating."),
-            ("Applicable AI skills",        "Using AI for content creation, freelance services, business automation and productivity — skills that translate directly into work."),
+            ("Applicable AI skills",        "Using AI for content creation, freelance services, business automation and productivity, skills that translate directly into work."),
             ("Speed-of-the-field updates",  "Continuously refreshed curriculum and programming so members keep pace with the latest developments."),
             ("Address the skills gap",      "Preparing young people for the AI-driven economy the UK government is investing billions into building."),
         ],
@@ -109,12 +109,12 @@ PILLARS = [
         "name": "Content Creation",
         "short": "Content",
         "icon": "lens",
-        "tagline": "Storytelling, personal brand, and creator economics — done with technology.",
+        "tagline": "Storytelling, personal brand, and creator economics, done with technology.",
         "points": [
             ("Skilled creators",            "Use digital tools, AI and modern platforms to build audiences, communicate ideas and create income."),
             ("Content strategy &amp; brand",    "Storytelling and personal branding as core professional skills that translate across every industry and career path."),
             ("Tech × creativity",           "Combine AI tools, blockchain and digital platforms to build sustainable creative careers and businesses."),
-            ("Production craft",            "Video, written content, social media strategy and audience-building — taught by practitioners with real-world experience."),
+            ("Production craft",            "Video, written content, social media strategy and audience-building, taught by practitioners with real-world experience."),
         ],
     },
     {
@@ -126,8 +126,8 @@ PILLARS = [
         "points": [
             ("Entrepreneurial thinking",      "Teach members to identify problems, build solutions and create value."),
             ("Practical business education",   "Venture building, market understanding, financial literacy, income generation, and the skills required to start and grow a business."),
-            ("Barriers the UK faces",          "Address the specific barriers facing young entrepreneurs — access to funding, tools, technology and marketing support."),
-            ("Modern entrepreneurship",        "Side hustles, digital businesses, freelancing and building income through the internet — accessible regardless of background or starting point."),
+            ("Barriers the UK faces",          "Address the specific barriers facing young entrepreneurs, access to funding, tools, technology and marketing support."),
+            ("Modern entrepreneurship",        "Side hustles, digital businesses, freelancing and building income through the internet, accessible regardless of background or starting point."),
             ("Mentors, investors, collaborators", "Connect members with the networks and support that accelerate real business growth."),
         ],
     },
@@ -138,16 +138,16 @@ CROSS_CUTTING = [
         "name": "Life Intelligence &amp; Modern Thinking",
         "items": [
             ("Critical thinking, EQ, adaptability", "Foundational skills for navigating a complex and rapidly changing world."),
-            ("Decision-making frameworks",          "First-principles thinking, inversion, second-order thinking — tools that apply across business, relationships and personal development."),
+            ("Decision-making frameworks",          "First-principles thinking, inversion, second-order thinking, tools that apply across business, relationships and personal development."),
             ("Personal development",                "Goal setting, leadership skills, self mastery and the mindset required to create meaningful impact."),
         ],
     },
     {
         "name": "Community &amp; Access",
         "items": [
-            ("Unite communities across London",     "Improve futures through IT, AI and entrepreneurship — annual events, seminars, talks and workshops."),
+            ("Unite communities across London",     "Improve futures through IT, AI and entrepreneurship, annual events, seminars, talks and workshops."),
             ("Representation for excluded communities", "Raise the visibility of THI members and improve quality of life through technology and education."),
-            ("Inclusive delivery",                  "Ensure access for those most at risk from technological change — minority communities, young people not in education or employment, and those facing socioeconomic barriers."),
+            ("Inclusive delivery",                  "Ensure access for those most at risk from technological change, minority communities, young people not in education or employment, and those facing socioeconomic barriers."),
         ],
     },
 ]
@@ -160,14 +160,16 @@ ROADMAP = [
 ]
 
 PROGRAMMES = [
+    ("Age of Agents",
+     "Our new flagship programme on the AI agents reshaping work and ownership. Understand them, build your first one, and learn to own and operate them with a phone and an internet connection."),
     ("Workshops &amp; Masterclasses",
-     "Deep-dive sessions on specific topics in IT, AI, blockchain, content creation, entrepreneurship and life intelligence — led by industry practitioners. Hands-on, practical, and directly applicable to real-world situations."),
+     "Deep-dive sessions on specific topics in IT, AI, blockchain, content creation, entrepreneurship and life intelligence, led by industry practitioners. Hands-on, practical, and directly applicable to real-world situations."),
     ("Expert Speaker Series",
      "Regular talks and Q&amp;A with founders, innovators, developers and thought leaders sharing their journeys, insights and real-world experience at the frontier of their fields."),
     ("One-to-One Mentorship Matching",
-     "Personalised pairing of members with experienced professionals for ongoing guidance, accountability and support — the kind that changes the direction of careers and businesses."),
+     "Personalised pairing of members with experienced professionals for ongoing guidance, accountability and support, the kind that changes the direction of careers and businesses."),
     ("Networking &amp; Community Events",
-     "Curated gatherings that connect members with peers, mentors and collaborators in their fields of interest — including the annual Frontier Fusion event."),
+     "Curated gatherings that connect members with peers, mentors and collaborators in their fields of interest, including the annual Frontier Fusion event."),
     ("Online Resources &amp; Learning Platform",
      "Accessible educational content, recorded sessions, curated materials and a digital resource library available to all members."),
 ]
@@ -179,13 +181,13 @@ PARTNERS_BENEFITS = [
     ("Speaking opportunities",  "Share the organisation's story and values with the THI community."),
     ("Talent pipeline",         "Early access to emerging talent from the THI member base."),
     ("Social media recognition","Features and appreciation across THI's digital channels."),
-    ("Exclusive event invitations", "Flagship programmes and networking events — including Frontier Fusion."),
+    ("Exclusive event invitations", "Flagship programmes and networking events, including Frontier Fusion."),
 ]
 
 # Confirmed Frontier Fusion 2026 partners (from the event poster).
 PARTNERS_CONFIRMED = [
-    ("On Chain Brits",  "UK on-chain community partner — Frontier Fusion 2026."),
-    ("Superteam UK",    "Solana ecosystem in the UK — Frontier Fusion 2026."),
+    ("On Chain Brits",  "UK on-chain community partner: Frontier Fusion 2026."),
+    ("Superteam UK",    "Solana ecosystem in the UK: Frontier Fusion 2026."),
     ("Gosen Inc.",      "Frontier Fusion 2026 supporter."),
     ("OhJay",           "Frontier Fusion 2026 supporter."),
 ]
@@ -193,9 +195,9 @@ PARTNERS_CONFIRMED = [
 FRONTIER = {
     "title":   "Frontier Fusion",
     "subtitle":"AI &amp; On-Chain Innovation",
-    "date":    "15 May 2026, 6pm",
-    "venue":   "Encode Hub, London, United Kingdom",
-    "blurb":   "THI's flagship annual gathering — bringing together AI, on-chain and creator communities for a night of talks, demos and connections at the frontier of where technology is going next. Hosted in partnership with On Chain Brits and Superteam UK.",
+    "date":    "Friday, 15 May 2026",
+    "venue":   "Encode Hub, 41 Pitfield St, London N1 6DA",
+    "blurb":   "THI's flagship annual gathering, bringing together AI, on-chain and creator communities for a night of talks, demos and connections at the frontier of where technology is going next. Hosted in partnership with On Chain Brits and Superteam UK.",
     "rsvp":    "instagram",  # poster's QR points to Instagram
 }
 
@@ -208,11 +210,11 @@ GOVERNANCE = [
     ("Accurate records",
      "The Treasurer, with the Secretary, keeps accurate financial records covering income, expenditure and assets."),
     ("Funds used to further the aims",
-     "Every pound raised by THI is used directly to further the aims — educational resources and technology, venue and events, expert speakers and mentors, and outreach to grow the community we exist to serve."),
+     "Every pound raised by THI is used directly to further the aims, educational resources and technology, venue and events, expert speakers and mentors, and outreach to grow the community we exist to serve."),
     ("Insurance",
      "The committee may take out appropriate insurance to protect the organisation and its members."),
     ("Amendments and dissolution",
-     "Constitutional amendments and any dissolution can only be carried out at a formally convened meeting with at least 75% of those present and voting in favour. On dissolution any remaining assets pass to a properly constituted body with similar aims — never to private individuals or commercial organisations."),
+     "Constitutional amendments and any dissolution can only be carried out at a formally convened meeting with at least 75% of those present and voting in favour. On dissolution any remaining assets pass to a properly constituted body with similar aims, never to private individuals or commercial organisations."),
 ]
 
 # ---------------------------------------------------------------------------
@@ -234,7 +236,7 @@ def icon(key, color=None):
     c = f' style="color:{color}"' if color else ""
     return f'<svg width="28" height="28" viewBox="0 0 24 24"{c}>{g}</svg>'
 
-# THI mark — the official logo, sourced from the JPEG provided by the
+# THI mark, the official logo, sourced from the JPEG provided by the
 # committee (assets/thi-logo.jpeg). Used at varying sizes across the site.
 # `inverted=True` adds a white tile behind the logo for use on dark surfaces
 # (navbar, footer, dark sections) so the satin background reads as intentional.
@@ -416,6 +418,7 @@ def navbar(active=""):
     links = [
         ("about",            "About",            "About"),
         ("programmes",       "Programmes",       "Programmes"),
+        ("age-of-agents",    "Age of Agents",    "Age of Agents"),
         ("frontier-fusion",  "Frontier Fusion",  "Frontier Fusion"),
         ("governance",       "Governance",       "Governance"),
         ("partners",         "Partners",         "Partners"),
@@ -432,6 +435,7 @@ def footer():
     nav_links = "".join([
         '<li><a href="about.html">About</a></li>',
         '<li><a href="programmes.html">Programmes</a></li>',
+        '<li><a href="age-of-agents.html">Age of Agents</a></li>',
         '<li><a href="frontier-fusion.html">Frontier Fusion</a></li>',
         '<li><a href="governance.html">Governance</a></li>',
         '<li><a href="partners.html">Partners</a></li>',
@@ -443,7 +447,7 @@ def footer():
   <div>{thi_mark(64, inverted=True)}
     <h5 style="margin-top:14px">The Hiram Initiative</h5>
     <p>{ORG['tagline']}</p>
-    <p style="margin-top:14px">A community of young people in the United Kingdom who aren't waiting for opportunities — they're creating them.</p>
+    <p style="margin-top:14px">A community of young people in the United Kingdom who aren't waiting for opportunities, they're creating them.</p>
     <p class="muted" style="font-size:.82rem;margin-top:14px">Registered office<br>{ORG['address']}</p>
   </div>
   <div>
@@ -480,7 +484,7 @@ def page(fname, title, desc, body, active=""):
     # Clean URLs: drop .html from every internal page link. The files on disk
     # stay flat (about.html etc.); GitHub Pages serves /about from about.html
     # natively. Skips external (has "://"), mailto, asset paths (.jpeg/.png/
-    # .svg/.css/.js — those have no .html), and bare anchors.
+    # .svg/.css/.js, those have no .html), and bare anchors.
     out = re.sub(r'href="index\.html(#[^"]*)?"',
                  lambda m: f'href="/{m.group(1) or ""}"', out)
     out = re.sub(r'href="([a-z0-9][a-z0-9-]*)\.html(#[^"]*)?"', r'href="\1\2"', out)
@@ -506,7 +510,7 @@ def home():
 <span class="eyebrow orange">{ORG['tagline']}</span>
 <h1>A generation that is not waiting for opportunities.<br><em>They are creating them.</em></h1>
 <p class="thesis">{ORG['thesis']}</p>
-<p class="lead">The Hiram Initiative exists to bridge the gap between traditional education and the rapidly evolving demands of the modern world — through hands-on education in IT, AI, blockchain, content creation and entrepreneurship, direct access to industry professionals, and a community built around shared purpose.</p>
+<p class="lead">The Hiram Initiative exists to bridge the gap between traditional education and the rapidly evolving demands of the modern world, through hands-on education in IT, AI, blockchain, content creation and entrepreneurship, direct access to industry professionals, and a community built around shared purpose.</p>
 <div class="cta">
   <a class="btn btn-primary" href="programmes.html">See the programmes →</a>
   <a class="btn btn-ghost" href="frontier-fusion.html">Frontier Fusion 2026 ↗</a>
@@ -515,7 +519,7 @@ def home():
 
 <section class="band"><div class="wrap">
 <div class="sec-head"><span class="eyebrow">The five pillars</span><h2>Built around what young people actually need</h2>
-<p class="lead">Each pillar is a working programme — workshops, masterclasses, mentorship and community — designed for those most at risk from technological change, and most ready to shape what comes next.</p></div>
+<p class="lead">Each pillar is a working programme, workshops, masterclasses, mentorship and community, designed for those most at risk from technological change, and most ready to shape what comes next.</p></div>
 <div class="grid g3">{pillar_tiles}</div>
 </div></section>
 
@@ -546,7 +550,7 @@ def home():
 <div class="grid g2">
   <div>
     <p>The name comes from the Hebrew, meaning <em>Brother of the Exalted. Noble. Free.</em></p>
-    <p>In 1 Kings 5, Hiram was a king who sent his finest craftsmen, resources and skills to help Solomon build the Temple — the most significant structure of a generation. He crossed national and cultural lines to equip the people around him with what they needed to build something that would outlast them all.</p>
+    <p>In 1 Kings 5, Hiram was a king who sent his finest craftsmen, resources and skills to help Solomon build the Temple, the most significant structure of a generation. He crossed national and cultural lines to equip the people around him with what they needed to build something that would outlast them all.</p>
     <p><strong>Hiram did not build the Temple. He equipped the people who did.</strong> That is what The Hiram Initiative is doing for this generation.</p>
     <a class="btn btn-ghost" href="about.html" style="margin-top:8px">Read the full identity →</a>
   </div>
@@ -559,8 +563,8 @@ def home():
 </div>
 </div></section>
 """
-    page("index.html", f"{ORG['name']} — {ORG['tagline']}",
-         "The Hiram Initiative equips young people in the UK with IT, AI, blockchain, content creation and entrepreneurship skills — through workshops, masterclasses, mentorship and community.",
+    page("index.html", f"{ORG['name']}, {ORG['tagline']}",
+         "The Hiram Initiative equips young people in the UK with IT, AI, blockchain, content creation and entrepreneurship skills, through workshops, masterclasses, mentorship and community.",
          body, "")
 
 def about():
@@ -569,18 +573,18 @@ def about():
         for name, role, bio in COMMITTEE
     )
     vol_lines = "".join(
-        f'<li><strong>{n}</strong> — <span class="muted">{r}</span></li>' for n, r in VOLUNTEERS
+        f'<li><strong>{n}</strong>, <span class="muted">{r}</span></li>' for n, r in VOLUNTEERS
     )
     body = f"""
 <section class="hero"><div class="wrap">
 <span class="eyebrow">About</span>
 <h1>Identity and purpose</h1>
-<p class="thesis">We bridge the gap between traditional education and the demands of the modern world — and the gap between where young people are and where they're <em>capable of going</em>.</p>
+<p class="thesis">We bridge the gap between traditional education and the demands of the modern world, and the gap between where young people are and where they're <em>capable of going</em>.</p>
 </div></section>
 
 <section><div class="wrap">
 <div class="sec-head"><span class="eyebrow">Mission</span><h2>What we do</h2></div>
-<p class="lead">The Hiram Initiative exists to close the gap between where young people are and where they are capable of going. We do this by focusing on the skills, mindset and networks that define success in the modern world — delivered through hands-on education, direct access to industry professionals, and a community built around shared purpose.</p>
+<p class="lead">The Hiram Initiative exists to close the gap between where young people are and where they are capable of going. We do this by focusing on the skills, mindset and networks that define success in the modern world, delivered through hands-on education, direct access to industry professionals, and a community built around shared purpose.</p>
 </div></section>
 
 <section class="band"><div class="wrap">
@@ -591,19 +595,19 @@ def about():
 <section><div class="wrap">
 <div class="sec-head"><span class="eyebrow">The name</span><h2>Why "Hiram"</h2></div>
 <p>The name <em>Hiram</em> comes from the Hebrew meaning <em>Brother of the Exalted. Noble. Free.</em></p>
-<p>In 1 Kings 5, Hiram was a king who sent his finest craftsmen, resources and skills to help Solomon build the Temple — the most significant structure of a generation. He crossed national and cultural lines to equip the people around him with what they needed to build something that would outlast them all.</p>
+<p>In 1 Kings 5, Hiram was a king who sent his finest craftsmen, resources and skills to help Solomon build the Temple, the most significant structure of a generation. He crossed national and cultural lines to equip the people around him with what they needed to build something that would outlast them all.</p>
 <p style="font-size:1.2rem;font-weight:600">Hiram did not build the Temple. He equipped the people who did. That is what The Hiram Initiative is doing for this generation.</p>
 </div></section>
 
 <section class="band"><div class="wrap">
 <div class="sec-head"><span class="eyebrow">Core aim</span><h2>Equipping young people to face the technological wave</h2></div>
-<p class="lead">Our aim is to support young people in attaining their full potential through education in Information Technology, Artificial Intelligence, Blockchain, Content Creation and Entrepreneurship — equipping them to confidently face the social, economic and community challenges that increasingly emerge through technological development.</p>
+<p class="lead">Our aim is to support young people in attaining their full potential through education in Information Technology, Artificial Intelligence, Blockchain, Content Creation and Entrepreneurship, equipping them to confidently face the social, economic and community challenges that increasingly emerge through technological development.</p>
 <div class="cta"><a class="btn btn-primary" href="programmes.html">See the five pillars →</a></div>
 </div></section>
 
 <section><div class="wrap">
 <div class="sec-head"><span class="eyebrow">Who runs THI</span><h2>Current committee</h2>
-<p class="lead">A small founding committee responsible for the overall direction, oversight and operational management of the organisation — appointed for an initial three-year term in line with Section 4.4 of the constitution.</p></div>
+<p class="lead">A small founding committee responsible for the overall direction, oversight and operational management of the organisation, appointed for an initial three-year term in line with Section 4.4 of the constitution.</p></div>
 <div class="grid g3">{com_cards}</div>
 <div style="margin-top:32px">
   <h3>Volunteers contributing to the work</h3>
@@ -612,8 +616,8 @@ def about():
 <div class="note"><strong>How the committee operates.</strong> Anyone can apply to join the committee. Vacancies can be filled by co-option. Election or removal happens at a formally convened committee meeting. Members serve three-year terms and are eligible for re-election. A member may resign at any time, provided their resignation does not leave fewer than three members on the committee.</div>
 </div></section>
 """
-    page("about.html", f"About — {ORG['name']}",
-         "The Hiram Initiative's identity, mission, vision and current committee — adopted under the constitution of 13 May 2026.",
+    page("about.html", f"About, {ORG['name']}",
+         "The Hiram Initiative's identity, mission, vision and current committee, adopted under the constitution of 13 May 2026.",
          body, "about")
 
 def programmes():
@@ -643,7 +647,7 @@ def programmes():
 <section class="hero"><div class="wrap">
 <span class="eyebrow">Programmes</span>
 <h1>Five pillars, one community</h1>
-<p class="lead">The Hiram Initiative organises its work into five core pillars — Information Technology, Artificial Intelligence, Blockchain, Content Creation and Entrepreneurship — supported by Life Intelligence and Community Access running across them all.</p>
+<p class="lead">The Hiram Initiative organises its work into five core pillars: Information Technology, Artificial Intelligence, Blockchain, Content Creation and Entrepreneurship, supported by Life Intelligence and Community Access running across them all.</p>
 </div></section>
 
 <section><div class="wrap">
@@ -665,12 +669,12 @@ def programmes():
 
 <section class="band"><div class="wrap">
 <div class="sec-head"><span class="eyebrow">Across every pillar</span><h2>Life intelligence &amp; community</h2>
-<p class="lead">Two threads run through everything we deliver — mindset frameworks for navigating change, and inclusive access for the communities most at risk of being left behind.</p></div>
+<p class="lead">Two threads run through everything we deliver, mindset frameworks for navigating change, and inclusive access for the communities most at risk of being left behind.</p></div>
 <div class="grid g2">{cross_html}</div>
 </div></section>
 """
-    page("programmes.html", f"Programmes — {ORG['name']}",
-         "The five pillars of The Hiram Initiative — IT, AI, Blockchain, Content Creation, Entrepreneurship — with the 2026 roadmap of workshops, masterclasses, mentorship and community events.",
+    page("programmes.html", f"Programmes, {ORG['name']}",
+         "The five pillars of The Hiram Initiative: IT, AI, Blockchain, Content Creation, Entrepreneurship, with the 2026 roadmap of workshops, masterclasses, mentorship and community events.",
          body, "programmes")
 
 def pillar_page(p):
@@ -704,63 +708,108 @@ def pillar_page(p):
 <div class="grid g4">{other}</div>
 </div></section>
 """
-    page(f"{p['slug']}.html", f"{re.sub('<.*?>', '', p['name'])} — {ORG['name']}",
-         f"The {re.sub('<.*?>', '', p['name'])} pillar of The Hiram Initiative — {re.sub('<.*?>', '', p['tagline'])}",
+    page(f"{p['slug']}.html", f"{re.sub('<.*?>', '', p['name'])}, {ORG['name']}",
+         f"The {re.sub('<.*?>', '', p['name'])} pillar of The Hiram Initiative, {re.sub('<.*?>', '', p['tagline'])}",
          body, "programmes")
 
 def frontier_fusion():
+    gallery = "".join(
+        f'<img src="assets/ff-{i:02d}.jpg" alt="Frontier Fusion 2026, Encode Hub London" loading="lazy" '
+        'style="width:100%;height:240px;object-fit:cover;border-radius:12px;display:block">'
+        for i in range(1, 9)
+    )
     body = f"""
 <section class="ff-hero"><div class="wrap">
-<span class="ff-chip">#savethedate · {FRONTIER['date']}</span>
+<span class="ff-chip">Recap · {FRONTIER['date']}</span>
 <h1 style="margin-top:18px">Frontier<br>Fusion</h1>
 <p style="font-size:1.6rem;margin-top:8px;font-weight:600;color:#dde7ff">{FRONTIER['subtitle']}</p>
 <p style="font-size:1.1rem;max-width:62ch;margin-top:24px;color:#e7edff">{FRONTIER['blurb']}</p>
 <div class="ff-meta">
-  <div><strong>When</strong>{FRONTIER['date']}</div>
+  <div><strong>When</strong>{FRONTIER['date']}, 6pm</div>
   <div><strong>Where</strong>{FRONTIER['venue']}</div>
-  <div><strong>RSVP</strong>via Instagram</div>
+  <div><strong>Hosts</strong>THI, OnchainBrits and Superteam UK</div>
 </div>
 <div class="cta">
-  <a class="btn" style="background:{FF_YELLOW};color:{INK}" href="{ORG['instagram_url']}" target="_blank" rel="noopener">RSVP via Instagram ↗</a>
-  <a class="btn btn-ghost" style="border-color:#fff;color:#fff" href="partners.html">See the partners →</a>
+  <a class="btn" style="background:{FF_YELLOW};color:{INK}" href="#gallery">See the photos ↓</a>
+  <a class="btn btn-ghost" style="border-color:#fff;color:#fff" href="{ORG['instagram_url']}" target="_blank" rel="noopener">On Instagram ↗</a>
 </div>
 </div></section>
 
 <section><div class="wrap">
-<div class="sec-head"><span class="eyebrow">What it is</span><h2>An evening at the intersection</h2>
-<p class="lead">Frontier Fusion is THI's flagship annual networking event — curated to connect members, mentors, founders and operators across the AI, on-chain and creator communities. Talks, demos and conversations at the frontier of where these worlds meet.</p></div>
+<div class="sec-head"><span class="eyebrow">The night</span><h2>An evening at the intersection</h2>
+<p class="lead">Frontier Fusion was a memorable evening at Encode Hub, bringing creators, builders, founders and community members together around Solana, AI, blockchain, content creation and Internet Capital Markets. The room was packed, not a seat left, and by the end nobody felt like a stranger.</p></div>
 <div class="grid g3">
-  <div class="card"><div class="icon-wrap">{icon("spark")}</div><h3>AI tracks</h3><p>Where artificial intelligence is actually shipping today — agents, creator tools, productivity and the careers being built on top of them.</p></div>
-  <div class="card"><div class="icon-wrap">{icon("chain")}</div><h3>On-chain tracks</h3><p>Real-world Web3 — payments, identity, on-chain communities and the UK's growing role in the decentralised economy.</p></div>
-  <div class="card"><div class="icon-wrap">{icon("lens")}</div><h3>Creator tracks</h3><p>Storytelling, audience-building and the creator economics that bind AI and on-chain into careers people can actually live on.</p></div>
+  <div class="card"><div class="icon-wrap">{icon("lens")}</div><h3>Content on three levels</h3><p>How content really works, across Discovery, Trust and Community, and why each level compounds the next.</p></div>
+  <div class="card"><div class="icon-wrap">{icon("spark")}</div><h3>The evolution of AI prompting</h3><p>A walk through the history and craft of prompting, from first principles to where it is heading next.</p></div>
+  <div class="card"><div class="icon-wrap">{icon("chain")}</div><h3>Owning assets with a phone</h3><p>Owning real assets, including AI agents, with nothing more than a mobile phone and an internet connection.</p></div>
+</div>
+</div></section>
+
+<section class="band" id="gallery"><div class="wrap">
+<div class="sec-head"><span class="eyebrow">The room</span><h2>Photos from the night</h2>
+<p class="lead">A packed house at Encode Hub, London.</p></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:8px">{gallery}</div>
+</div></section>
+
+<section><div class="wrap">
+<div class="sec-head"><span class="eyebrow">Who made it</span><h2>Hosts and collaborators</h2>
+<p class="lead">Co-hosted by The Hiram Initiative with the UK's most active on-chain communities.</p></div>
+<div class="grid g4">
+  <div class="card"><h3>The Hiram Initiative</h3><p>Host: the young-people-first community programme behind the event.</p></div>
+  <div class="card"><h3>OnchainBrits</h3><p>UK on-chain community partner: programming, network and reach.</p></div>
+  <div class="card"><h3>Superteam UK</h3><p>The Solana ecosystem in the UK, bringing builders, founders and operators.</p></div>
+  <div class="card"><h3>Onchain Hub and Encode Club</h3><p>Venue and community collaborators, with support from Chewie and Ohjay.</p></div>
+</div>
+</div></section>
+
+<section class="band"><div class="wrap" style="text-align:center">
+<div class="sec-head" style="margin:0 auto"><span class="eyebrow">The takeaway</span><h2>Still early. Just go build.</h2>
+<p class="lead" style="margin:0 auto">Attendees left energised, with a clear message: it is still early, and the moment to build is now. Frontier Fusion strengthened the London frontier-tech scene and built excitement ahead of Breakpoint 2026.</p></div>
+<div class="cta" style="justify-content:center"><a class="btn btn-primary" href="contact.html">Get involved →</a><a class="btn btn-ghost" href="age-of-agents.html">Age of Agents →</a></div>
+</div></section>
+"""
+    page("frontier-fusion.html", f"Frontier Fusion 2026: AI &amp; On-Chain Innovation · {ORG['name']}",
+         "Frontier Fusion 2026 recap: THI's flagship night at Encode Hub, London, with OnchainBrits and Superteam UK. Solana, AI, content and Internet Capital Markets. 15 May 2026.",
+         body, "frontier-fusion")
+
+def age_of_agents():
+    body = f"""
+<section class="ff-hero"><div class="wrap">
+<span class="ff-chip">New programme</span>
+<h1 style="margin-top:18px">Age of<br>Agents</h1>
+<p style="font-size:1.6rem;margin-top:8px;font-weight:600;color:#dde7ff">Understand, build and own the AI agents defining the next decade.</p>
+<p style="font-size:1.1rem;max-width:64ch;margin-top:24px;color:#e7edff">AI agents are moving from novelty to infrastructure: software that decides and acts on your behalf. The Age of Agents is THI's new flagship programme, equipping young people to meet that shift not as spectators but as builders and owners.</p>
+<div class="cta">
+  <a class="btn" style="background:{FF_YELLOW};color:{INK}" href="contact.html">Join the programme →</a>
+  <a class="btn btn-ghost" style="border-color:#fff;color:#fff" href="programmes.html">All programmes →</a>
+</div>
+</div></section>
+
+<section><div class="wrap">
+<div class="sec-head"><span class="eyebrow">What you learn</span><h2>Four tracks, one journey</h2>
+<p class="lead">From first principles to owning and operating your own agents, taught by people building in the field.</p></div>
+<div class="grid g4">
+  <div class="card"><div class="icon-wrap">{icon("lens")}</div><h3>Understand agents</h3><p>What an AI agent actually is, how it reasons and acts, and where it fits alongside the tools you already use.</p></div>
+  <div class="card"><div class="icon-wrap">{icon("spark")}</div><h3>Build your first agent</h3><p>Hands-on, from a prompt to a working agent that completes real tasks, with the craft of prompting and tools.</p></div>
+  <div class="card"><div class="icon-wrap">{icon("hands")}</div><h3>Own your agents</h3><p>Operating and owning agents with a mobile phone and an internet connection, no gatekeeper required.</p></div>
+  <div class="card"><div class="icon-wrap">{icon("chain")}</div><h3>Agents on-chain</h3><p>Where agents meet Solana, payments and Internet Capital Markets, and the new economics that opens up.</p></div>
 </div>
 </div></section>
 
 <section class="band"><div class="wrap">
-<div class="sec-head"><span class="eyebrow">Who's hosting</span><h2>Partners on the night</h2>
-<p class="lead">Co-curated with the UK's most active on-chain community partners.</p></div>
-<div class="grid g4">
-  <div class="card"><h3>The Hiram Initiative</h3><p>Host · the young-people-first community programme behind the event.</p></div>
-  <div class="card"><h3>On Chain Brits</h3><p>UK on-chain community partner — programming, network and reach.</p></div>
-  <div class="card"><h3>Superteam UK</h3><p>Solana ecosystem in the UK — bringing builders, founders and operators from across the on-chain stack.</p></div>
-  <div class="card"><h3>Gosen Inc. · OhJay</h3><p>Frontier Fusion 2026 supporters.</p></div>
+<div class="sec-head"><span class="eyebrow">Why now</span><h2>The shift is happening in the open</h2>
+<p class="lead">The people who understand agents early, and who can build and own them, will shape the next decade of work. THI exists to make sure the young people most exposed to that change are the ones leading it, not left behind by it.</p></div>
+<div class="grid g3">
+  <div class="card"><h3>For beginners</h3><p>No prior experience needed. We start from first principles and build up.</p></div>
+  <div class="card"><h3>Practical, not theoretical</h3><p>You leave with agents you built, and the confidence to keep building.</p></div>
+  <div class="card"><h3>Community-backed</h3><p>Mentorship, the Expert Speaker Series and events like Frontier Fusion carry the learning beyond the screen.</p></div>
 </div>
-</div></section>
-
-<section><div class="wrap">
-<div class="sec-head"><span class="eyebrow">If you should be there</span><h2>Who Frontier Fusion is for</h2></div>
-<ul style="line-height:1.9;font-size:1.05rem">
-<li>Young people exploring careers in AI, Web3 or content — the people we exist to equip.</li>
-<li>Founders, builders and developers in the UK's AI / on-chain / creator ecosystems.</li>
-<li>Partners and supporters who want to meet the THI community first-hand.</li>
-<li>Mentors and Expert Speaker Series alumni continuing the conversation off-stage.</li>
-</ul>
-<div class="cta"><a class="btn btn-primary" href="{ORG['instagram_url']}" target="_blank" rel="noopener">RSVP via Instagram ↗</a><a class="btn btn-ghost" href="partners.html">Partner with us →</a></div>
+<div class="cta"><a class="btn btn-primary" href="contact.html">Get involved →</a><a class="btn btn-ghost" href="frontier-fusion.html">See Frontier Fusion →</a></div>
 </div></section>
 """
-    page("frontier-fusion.html", f"Frontier Fusion 2026 — AI &amp; On-Chain Innovation · {ORG['name']}",
-         "Frontier Fusion — THI's flagship 2026 event at Encode Hub, London. AI & On-Chain Innovation, with On Chain Brits and Superteam UK. 15 May 2026, 6pm.",
-         body, "frontier-fusion")
+    page("age-of-agents.html", f"Age of Agents: THI's new AI-agents programme · {ORG['name']}",
+         "Age of Agents is The Hiram Initiative's new flagship programme: understand, build and own the AI agents shaping the next decade. Four tracks, from first principles to agents on-chain.",
+         body, "programmes")
 
 def governance():
     rows = "".join(
@@ -793,19 +842,19 @@ def governance():
 <div class="sec-head"><span class="eyebrow">The constitution</span><h2>Adopted {ORG['adopted']}</h2>
 <p class="lead">The constitution is the source of truth for how THI is structured, governed and operated. It covers identity, aims, programmes, governance, powers, finances, partnerships, amendments and dissolution.</p></div>
 <div class="grid g2">
-  <div class="card"><h3>Part One — Identity and Purpose</h3><p>Name, registered address, mission, vision, tagline, and the meaning of Hiram.</p></div>
-  <div class="card"><h3>Part Two — Aims and Objectives</h3><p>The core aim, strategic objectives across the five pillars, and the cross-cutting work on Life Intelligence and Community Access.</p></div>
-  <div class="card"><h3>Part Three — Programmes and Delivery</h3><p>Workshops, masterclasses, Expert Speaker Series, mentorship matching, networking events, and the 2026 roadmap.</p></div>
-  <div class="card"><h3>Part Four — Governance and Committee</h3><p>Committee structure, composition, current committee, and rules for membership, election, co-option and resignation.</p></div>
-  <div class="card"><h3>Part Five — Powers of the Committee</h3><p>What the committee may do in furtherance of the aims — raise funds, hold an account, run programmes, partner, employ, consult.</p></div>
-  <div class="card"><h3>Part Six — Finances and Funds</h3><p>Two-signatory rule, no personal benefit, accurate records, and how funds are used across resources, events, mentors and outreach.</p></div>
-  <div class="card"><h3>Part Seven — Partnerships and Collaboration</h3><p>Partnership principles, benefits to partners, and alignment with future workforce needs.</p></div>
-  <div class="card"><h3>Part Eight — Amendments and Dissolution</h3><p>Any change requires a 75% vote at a formally convened meeting; on dissolution, assets pass to a body with similar aims.</p></div>
+  <div class="card"><h3>Part One: Identity and Purpose</h3><p>Name, registered address, mission, vision, tagline, and the meaning of Hiram.</p></div>
+  <div class="card"><h3>Part Two: Aims and Objectives</h3><p>The core aim, strategic objectives across the five pillars, and the cross-cutting work on Life Intelligence and Community Access.</p></div>
+  <div class="card"><h3>Part Three: Programmes and Delivery</h3><p>Workshops, masterclasses, Expert Speaker Series, mentorship matching, networking events, and the 2026 roadmap.</p></div>
+  <div class="card"><h3>Part Four: Governance and Committee</h3><p>Committee structure, composition, current committee, and rules for membership, election, co-option and resignation.</p></div>
+  <div class="card"><h3>Part Five: Powers of the Committee</h3><p>What the committee may do in furtherance of the aims, raise funds, hold an account, run programmes, partner, employ, consult.</p></div>
+  <div class="card"><h3>Part Six: Finances and Funds</h3><p>Two-signatory rule, no personal benefit, accurate records, and how funds are used across resources, events, mentors and outreach.</p></div>
+  <div class="card"><h3>Part Seven: Partnerships and Collaboration</h3><p>Partnership principles, benefits to partners, and alignment with future workforce needs.</p></div>
+  <div class="card"><h3>Part Eight: Amendments and Dissolution</h3><p>Any change requires a 75% vote at a formally convened meeting; on dissolution, assets pass to a body with similar aims.</p></div>
 </div>
 <div class="note"><strong>Want to see the signed original?</strong> Email <a href="mailto:{ORG['email']}">{ORG['email']}</a> and we'll share a copy of the signed constitution PDF (adopted {ORG['adopted']}).</div>
 </div></section>
 """
-    page("governance.html", f"Governance — {ORG['name']}",
+    page("governance.html", f"Governance, {ORG['name']}",
          "How The Hiram Initiative is governed: committee, financial governance, and the constitution adopted 13 May 2026.",
          body, "governance")
 
@@ -830,7 +879,7 @@ def partners():
 
 <section><div class="wrap">
 <div class="sec-head"><span class="eyebrow">What partners receive</span><h2>Benefits, stated honestly</h2>
-<p class="lead">From the constitution, Part Seven — the practical benefits of supporting THI's work.</p></div>
+<p class="lead">From the constitution, Part Seven, the practical benefits of supporting THI's work.</p></div>
 {benefits}
 </div></section>
 
@@ -842,12 +891,12 @@ def partners():
 
 <section><div class="wrap">
 <div class="sec-head"><span class="eyebrow">Why it matters</span><h2>Alignment with future workforce needs</h2></div>
-<p class="lead">Every sector needs employees and builders who understand AI, blockchain and digital technology. By supporting The Hiram Initiative, partners contribute directly to building the talent pipeline their industries need — while positioning themselves as champions of youth empowerment and inclusive technological education.</p>
+<p class="lead">Every sector needs employees and builders who understand AI, blockchain and digital technology. By supporting The Hiram Initiative, partners contribute directly to building the talent pipeline their industries need, while positioning themselves as champions of youth empowerment and inclusive technological education.</p>
 <div class="cta"><a class="btn btn-primary" href="contact.html">Become a partner →</a></div>
 </div></section>
 """
-    page("partners.html", f"Partners — {ORG['name']}",
-         "Partner with The Hiram Initiative: brand recognition, community access, talent pipeline and impact reporting — alongside On Chain Brits, Superteam UK and other 2026 partners.",
+    page("partners.html", f"Partners, {ORG['name']}",
+         "Partner with The Hiram Initiative: brand recognition, community access, talent pipeline and impact reporting, alongside On Chain Brits, Superteam UK and other 2026 partners.",
          body, "partners")
 
 def contact():
@@ -855,7 +904,7 @@ def contact():
 <section class="hero"><div class="wrap">
 <span class="eyebrow">Get involved</span>
 <h1>Three ways in</h1>
-<p class="lead">Whether you're a young person ready to build, a professional with knowledge to share, or an organisation looking to back the work — here's how to reach us.</p>
+<p class="lead">Whether you're a young person ready to build, a professional with knowledge to share, or an organisation looking to back the work, here's how to reach us.</p>
 </div></section>
 
 <section><div class="wrap">
@@ -869,7 +918,7 @@ def contact():
   <div class="card">
     <div class="icon-wrap">{icon("hands")}</div>
     <h3>Mentor or speak</h3>
-    <p>You've built something. You'd give an hour back — or run a masterclass, or join the Expert Speaker Series. We pair you with members who can use what you know.</p>
+    <p>You've built something. You'd give an hour back, or run a masterclass, or join the Expert Speaker Series. We pair you with members who can use what you know.</p>
     <p style="margin-top:14px"><a class="btn btn-ghost" href="mailto:{ORG['email']}?subject=Mentorship%20%2F%20Speaking" style="padding:10px 18px;font-size:.9rem">Offer your time →</a></p>
   </div>
   <div class="card">
@@ -892,7 +941,7 @@ def contact():
   <div class="card">
     <h3>Phone</h3>
     <p><a href="tel:{ORG['phone'].replace(' ','')}">{ORG['phone']}</a></p>
-    <p class="muted">Office hours — leave a message and we'll come back the same week.</p>
+    <p class="muted">Office hours, leave a message and we'll come back the same week.</p>
   </div>
   <div class="card">
     <h3>Instagram</h3>
@@ -900,10 +949,10 @@ def contact():
     <p class="muted">Event announcements, member highlights, and Frontier Fusion RSVPs.</p>
   </div>
 </div>
-<div class="note" style="margin-top:32px"><strong>Registered office.</strong> {ORG['address']}. Visits by appointment — please email ahead.</div>
+<div class="note" style="margin-top:32px"><strong>Registered office.</strong> {ORG['address']}. Visits by appointment, please email ahead.</div>
 </div></section>
 """
-    page("contact.html", f"Contact — {ORG['name']}",
+    page("contact.html", f"Contact, {ORG['name']}",
          "Join, mentor, partner, or reach The Hiram Initiative directly. Email, phone, Instagram and registered office in Tottenham, London.",
          body, "")
 
@@ -919,15 +968,15 @@ def constitution_page():
 <section><div class="wrap">
 <div class="sec-head"><span class="eyebrow">Contents</span><h2>What's inside</h2></div>
 <ol style="line-height:2;font-size:1.05rem">
-  <li><strong>Part One</strong> — Identity and Purpose</li>
-  <li><strong>Part Two</strong> — Aims and Objectives</li>
-  <li><strong>Part Three</strong> — Programmes and Delivery</li>
-  <li><strong>Part Four</strong> — Governance and Committee</li>
-  <li><strong>Part Five</strong> — Powers of the Committee</li>
-  <li><strong>Part Six</strong> — Finances and Funds</li>
-  <li><strong>Part Seven</strong> — Partnerships and Collaboration</li>
-  <li><strong>Part Eight</strong> — Amendments and Dissolution</li>
-  <li><strong>Part Nine</strong> — Adoption and Signatures</li>
+  <li><strong>Part One</strong>: Identity and Purpose</li>
+  <li><strong>Part Two</strong>: Aims and Objectives</li>
+  <li><strong>Part Three</strong>: Programmes and Delivery</li>
+  <li><strong>Part Four</strong>: Governance and Committee</li>
+  <li><strong>Part Five</strong>: Powers of the Committee</li>
+  <li><strong>Part Six</strong>: Finances and Funds</li>
+  <li><strong>Part Seven</strong>: Partnerships and Collaboration</li>
+  <li><strong>Part Eight</strong>: Amendments and Dissolution</li>
+  <li><strong>Part Nine</strong>: Adoption and Signatures</li>
 </ol>
 </div></section>
 
@@ -940,7 +989,7 @@ def constitution_page():
 <div class="note"><strong>Amendments.</strong> Alterations may only be made at a formally convened meeting with at least 75% of those present and voting in favour. Proposed amendments must be submitted in writing to the Secretary at least 14 days before the meeting.</div>
 </div></section>
 """
-    page("constitution.html", f"Constitution and organisational framework — {ORG['name']}",
+    page("constitution.html", f"Constitution and organisational framework, {ORG['name']}",
          f"Public summary of The Hiram Initiative's constitution, adopted {ORG['adopted']}. Signed copy on request.",
          body, "governance")
 
@@ -953,6 +1002,7 @@ def build():
     programmes()
     for p in PILLARS: pillar_page(p)
     frontier_fusion()
+    age_of_agents()
     governance()
     partners()
     contact()
