@@ -716,7 +716,7 @@ def frontier_fusion():
     gallery = "".join(
         f'<img src="assets/ff-{i:02d}.jpg" alt="Frontier Fusion 2026, Encode Hub London" loading="lazy" '
         'style="width:100%;height:240px;object-fit:cover;border-radius:12px;display:block">'
-        for i in range(1, 9)
+        for i in range(1, 8)
     )
     body = f"""
 <section class="ff-hero"><div class="wrap">
@@ -733,6 +733,15 @@ def frontier_fusion():
   <a class="btn" style="background:{FF_YELLOW};color:{INK}" href="#gallery">See the photos ↓</a>
   <a class="btn btn-ghost" style="border-color:#fff;color:#fff" href="{ORG['instagram_url']}" target="_blank" rel="noopener">On Instagram ↗</a>
 </div>
+</div></section>
+
+<section><div class="wrap" style="display:flex;gap:36px;flex-wrap:wrap;align-items:center;justify-content:center">
+  <img src="assets/ff-flier.jpg" alt="Frontier Fusion 2026 flier" loading="lazy" style="width:100%;max-width:320px;border-radius:16px;box-shadow:0 14px 46px rgba(0,0,0,.22)">
+  <div style="flex:1;min-width:280px;max-width:460px">
+    <span class="eyebrow">The invitation</span>
+    <h2>The night, on one page</h2>
+    <p class="lead">The flier that drew the London frontier-tech community to Encode Hub for an evening of AI, on-chain and creator conversations.</p>
+  </div>
 </div></section>
 
 <section><div class="wrap">
@@ -775,19 +784,30 @@ def frontier_fusion():
 def age_of_agents():
     body = f"""
 <section class="ff-hero"><div class="wrap">
-<span class="ff-chip">New programme</span>
+<span class="ff-chip">9-11 July 2026 · 2-6pm</span>
 <h1 style="margin-top:18px">Age of<br>Agents</h1>
-<p style="font-size:1.6rem;margin-top:8px;font-weight:600;color:#dde7ff">Understand, build and own the AI agents defining the next decade.</p>
-<p style="font-size:1.1rem;max-width:64ch;margin-top:24px;color:#e7edff">AI agents are moving from novelty to infrastructure: software that decides and acts on your behalf. The Age of Agents is THI's new flagship programme, equipping young people to meet that shift not as spectators but as builders and owners.</p>
+<p style="font-size:1.6rem;margin-top:8px;font-weight:600;color:#dde7ff">An introduction into the creation of AI Agents.</p>
+<p style="font-size:1.1rem;max-width:64ch;margin-top:24px;color:#e7edff">THI's hands-on introduction to building AI agents: software that decides and acts on your behalf. Three afternoons that take you from what an agent is to creating your own, so you meet the shift as a builder, not a spectator.</p>
+<div class="ff-meta">
+  <div><strong>When</strong>9th to 11th July 2026, 2pm to 6pm</div>
+  <div><strong>Where</strong>454A Highroad, Bruce Grove, London N17 9JD</div>
+  <div><strong>Led by</strong>Joseph Falano (Ohjay), with Jalaaldeen Akinola (JRD)</div>
+</div>
 <div class="cta">
-  <a class="btn" style="background:{FF_YELLOW};color:{INK}" href="contact.html">Join the programme →</a>
+  <a class="btn" style="background:{FF_YELLOW};color:{INK}" href="{ORG['instagram_url']}" target="_blank" rel="noopener">Register (scan the flier QR) ↗</a>
   <a class="btn btn-ghost" style="border-color:#fff;color:#fff" href="programmes.html">All programmes →</a>
 </div>
 </div></section>
 
-<section><div class="wrap">
-<div class="sec-head"><span class="eyebrow">What you learn</span><h2>Four tracks, one journey</h2>
-<p class="lead">From first principles to owning and operating your own agents, taught by people building in the field.</p></div>
+<section><div class="wrap" style="text-align:center">
+<div class="sec-head" style="margin:0 auto"><span class="eyebrow">The event</span><h2>Age of the Agents</h2>
+<p class="lead" style="margin:0 auto 10px">Scan the QR on the flier to register. Places are limited.</p></div>
+<img src="assets/aoa-flier.jpg" alt="Age of the Agents: an introduction into the creation of AI Agents. 9th to 11th July 2026, 2pm to 6pm, 454A Highroad, Bruce Grove, London N17 9JD. Host Joseph Falano (Ohjay), facilitator Jalaaldeen Akinola (JRD)." loading="lazy" style="width:100%;max-width:760px;border-radius:16px;box-shadow:0 14px 46px rgba(0,0,0,.22)">
+</div></section>
+
+<section class="band"><div class="wrap">
+<div class="sec-head"><span class="eyebrow">What you learn</span><h2>From first principles to your own agent</h2>
+<p class="lead">Four tracks across the three afternoons, taught hands-on by people building in the field.</p></div>
 <div class="grid g4">
   <div class="card"><div class="icon-wrap">{icon("lens")}</div><h3>Understand agents</h3><p>What an AI agent actually is, how it reasons and acts, and where it fits alongside the tools you already use.</p></div>
   <div class="card"><div class="icon-wrap">{icon("spark")}</div><h3>Build your first agent</h3><p>Hands-on, from a prompt to a working agent that completes real tasks, with the craft of prompting and tools.</p></div>
@@ -796,19 +816,14 @@ def age_of_agents():
 </div>
 </div></section>
 
-<section class="band"><div class="wrap">
-<div class="sec-head"><span class="eyebrow">Why now</span><h2>The shift is happening in the open</h2>
-<p class="lead">The people who understand agents early, and who can build and own them, will shape the next decade of work. THI exists to make sure the young people most exposed to that change are the ones leading it, not left behind by it.</p></div>
-<div class="grid g3">
-  <div class="card"><h3>For beginners</h3><p>No prior experience needed. We start from first principles and build up.</p></div>
-  <div class="card"><h3>Practical, not theoretical</h3><p>You leave with agents you built, and the confidence to keep building.</p></div>
-  <div class="card"><h3>Community-backed</h3><p>Mentorship, the Expert Speaker Series and events like Frontier Fusion carry the learning beyond the screen.</p></div>
-</div>
-<div class="cta"><a class="btn btn-primary" href="contact.html">Get involved →</a><a class="btn btn-ghost" href="frontier-fusion.html">See Frontier Fusion →</a></div>
+<section><div class="wrap">
+<div class="sec-head"><span class="eyebrow">Who it is for</span><h2>Built for beginners, useful to builders</h2>
+<p class="lead">No prior experience needed. We start from first principles and build up, so you leave with an agent you made and the confidence to keep going. Part of THI's mission to put the young people most exposed to technological change at the front of it.</p></div>
+<div class="cta"><a class="btn btn-primary" href="{ORG['instagram_url']}" target="_blank" rel="noopener">Register on Instagram →</a><a class="btn btn-ghost" href="contact.html">Ask a question →</a></div>
 </div></section>
 """
-    page("age-of-agents.html", f"Age of Agents: THI's new AI-agents programme · {ORG['name']}",
-         "Age of Agents is The Hiram Initiative's new flagship programme: understand, build and own the AI agents shaping the next decade. Four tracks, from first principles to agents on-chain.",
+    page("age-of-agents.html", f"Age of Agents: an introduction to creating AI agents · {ORG['name']}",
+         "Age of Agents, The Hiram Initiative's hands-on introduction to creating AI agents. 9th to 11th July 2026, 2pm to 6pm, 454A Highroad, Bruce Grove, London N17 9JD. Led by Joseph Falano (Ohjay) with Jalaaldeen Akinola (JRD).",
          body, "programmes")
 
 def governance():
