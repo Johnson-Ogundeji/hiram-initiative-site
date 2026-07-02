@@ -201,6 +201,17 @@ FRONTIER = {
     "rsvp":    "instagram",  # poster's QR points to Instagram
 }
 
+# Age of Agents — the NEXT (upcoming) programme, featured on the home page.
+# Frontier Fusion (15 May 2026) has passed and now lives as a recap.
+AOA = {
+    "title":    "Age of Agents",
+    "subtitle": "An introduction into the creation of AI Agents.",
+    "date":     "9th to 11th July 2026, 2pm to 6pm",
+    "venue":    "454A Highroad, Bruce Grove, London N17 9JD",
+    "led_by":   "Joseph Falano (Ohjay), with Jalaaldeen Akinola (JRD)",
+    "blurb":    "THI's hands-on introduction to building AI agents: software that decides and acts on your behalf. Three afternoons that take you from what an agent is to creating your own, so you meet the shift as a builder, not a spectator.",
+}
+
 # Financial governance principles (Constitution Part Six + AGM §6)
 GOVERNANCE = [
     ("Two-signatory rule",
@@ -513,7 +524,7 @@ def home():
 <p class="lead">The Hiram Initiative exists to bridge the gap between traditional education and the rapidly evolving demands of the modern world, through hands-on education in IT, AI, blockchain, content creation and entrepreneurship, direct access to industry professionals, and a community built around shared purpose.</p>
 <div class="cta">
   <a class="btn btn-primary" href="programmes.html">See the programmes →</a>
-  <a class="btn btn-ghost" href="frontier-fusion.html">Frontier Fusion 2026 ↗</a>
+  <a class="btn btn-ghost" href="age-of-agents.html">Age of Agents · 9–11 Jul ↗</a>
 </div>
 </div></section>
 
@@ -531,17 +542,17 @@ def home():
 </div></section>
 
 <section class="ff-hero"><div class="wrap">
-<span class="ff-chip">#savethedate</span>
-<h1 style="margin-top:18px">Frontier Fusion <span style="display:block;font-size:.65em;font-weight:600;opacity:.9">{FRONTIER['subtitle']}</span></h1>
-<p style="font-size:1.15rem;max-width:60ch;margin-top:18px;color:#dde7ff">{FRONTIER['blurb']}</p>
+<span class="ff-chip">Next up · #savethedate</span>
+<h1 style="margin-top:18px">{AOA['title']} <span style="display:block;font-size:.5em;font-weight:600;opacity:.9">{AOA['subtitle']}</span></h1>
+<p style="font-size:1.15rem;max-width:60ch;margin-top:18px;color:#dde7ff">{AOA['blurb']}</p>
 <div class="ff-meta">
-  <div><strong>When</strong>{FRONTIER['date']}</div>
-  <div><strong>Where</strong>{FRONTIER['venue']}</div>
-  <div><strong>Partners</strong>On Chain Brits · Superteam UK</div>
+  <div><strong>When</strong>{AOA['date']}</div>
+  <div><strong>Where</strong>{AOA['venue']}</div>
+  <div><strong>Led by</strong>{AOA['led_by']}</div>
 </div>
 <div class="cta">
-  <a class="btn btn-ff" style="background:{FF_YELLOW};color:{INK}" href="frontier-fusion.html">Event details →</a>
-  <a class="btn btn-ghost" style="border-color:#fff;color:#fff" href="{ORG['instagram_url']}" target="_blank" rel="noopener">RSVP via Instagram ↗</a>
+  <a class="btn btn-ff" style="background:{FF_YELLOW};color:{INK}" href="age-of-agents.html">Event details →</a>
+  <a class="btn btn-ghost" style="border-color:#fff;color:#fff" href="{ORG['instagram_url']}" target="_blank" rel="noopener">Register via Instagram ↗</a>
 </div>
 </div></section>
 
