@@ -6,7 +6,8 @@ Checks the built site (website/) against the Builder to Business website update 
 
 1. No hyphen or dash in visible copy: text, image alt text, page titles and share descriptions (THI house style,
    brief page 06). Addresses, links and code are not copy and are not checked.
-2. No "454A" anywhere (the venue is 454 High Road).
+2. The address is "454A High Road, Bruce Grove, Tottenham, London N17 9JD" (the operator, 12 Nov 2026, superseding the brief's "454 High Road"):
+   it is on every page, and no bare "454 High Road" is left in the copy, alt text, metadata or event data.
 3. Every link whose text says "Register" goes to the Luma registration page; no registration goes to Instagram.
 4. Every internal link resolves to a page, and every image exists.
 5. The main menu has Builder to Business and not Age of Agents (which now sits under Programmes).
@@ -14,6 +15,8 @@ Checks the built site (website/) against the Builder to Business website update 
 7. The footer links to X; Joseph Falano is named Cofounder; the home page names the 18 to 35 audience.
 8. The asset pack is in: every speaker has a headshot (no initials), the official flyer is on the event page and the
    home page, and the promo video's source and poster exist, with the video fetched only when played.
+9. No page claims a registered office or address: THI has none yet (operator, 12 Nov 2026); 454A High Road is its
+   workspace and seminar venue.
 Prints SITE-CHECK-PASS or SITE-CHECK-FAIL and exits 0 or 1. Standard library only.
 """
 import html.parser, json, os, re, sys
@@ -85,12 +88,16 @@ def main():
     for f in pages:
         raw = open(os.path.join(SITE, f), encoding="utf-8").read()
         p = Page(); p.feed(raw); parsed[f] = p
-        if "454A" in raw:
-            bad.append(f"{f}: '454A' is still on the page")
+        if re.search(r"\b454 High ?road", raw, re.I):
+            bad.append(f"{f}: a bare '454 High Road' is on the page (the address is 454A)")
+        if "454A High Road, Bruce Grove, Tottenham, London N17 9JD" not in raw:
+            bad.append(f"{f}: the full address with its postcode is not on the page")
         texts = [t for _, t in p.copy] + [p.title] + [p.meta.get(k, "") for k in ("description", "og:title", "og:description")]
         for t in texts:
             for m in DASHES.finditer(t):
                 bad.append(f"{f}: a hyphen or dash in the copy: ...{t[max(0, m.start() - 30):m.end() + 30].strip()!r}")
+        if re.search(r"registered (office|address)", " ".join(texts), re.I):
+            bad.append(f"{f}: the copy claims a registered office or address (THI has none yet)")
         for href, text in p.links:
             if "register" in text.lower() and href != REGISTER:
                 bad.append(f"{f}: a Register link goes to {href}, not {REGISTER}")

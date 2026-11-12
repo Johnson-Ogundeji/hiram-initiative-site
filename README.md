@@ -13,7 +13,7 @@ via GitHub Pages).
 
 | Path | What it is |
 |---|---|
-| `assets/check_site.py` | Checks the built site against the Builder to Business brief: no hyphens or dashes in the copy, no "454A", every Register button to Luma, every link and image resolving, the menu, the event page's title, description and share image. `python3 assets/check_site.py` prints SITE-CHECK-PASS. |
+| `assets/check_site.py` | Checks the built site against the Builder to Business brief: no hyphens or dashes in the copy, the address as 454A with its postcode, every Register button to Luma, every link and image resolving, the menu, the event page's title, description and share image. `python3 assets/check_site.py` prints SITE-CHECK-PASS. |
 | `assets/build_site.py` | Single-file Python generator. No dependencies. Reads the content baked into the script (sourced directly from the constitution, AGM minutes and Frontier Fusion poster) and writes static HTML to `website/`. |
 | `website/` | The built site. This is what GitHub Pages serves. Regenerate any time with `python3 assets/build_site.py`. |
 | `website/CNAME` | Custom-domain pointer for GitHub Pages. |
@@ -97,8 +97,9 @@ First-time setup (one-off, in repo Settings → Pages):
 
 - Email: <admin@hiraminitiative.com>
 - Phone: +44 7424 271744
-- Instagram: [@thi_20_25](https://instagram.com/thi_20_25)
-- Registered office: 454A High Road, Tottenham, London, N17 9JD
+- Instagram: [@thehiraminitiative](https://www.instagram.com/thehiraminitiative)
+- X: [@thehiramINT](https://x.com/thehiramINT)
+- Workspace and seminar venue: 454A High Road, Bruce Grove, Tottenham, London N17 9JD (THI has no registered office yet)
 
 ## Licence
 

@@ -29,7 +29,9 @@ ORG = {
     "short":     "THI",
     "tagline":   "Wisdom · Purpose · Impact",
     "thesis":    "Hiram did not build the Temple. He equipped the people who did. That is what The Hiram Initiative is doing for this generation.",
-    "address":   "454 High Road, Tottenham, London, N17 9JD",
+    # THI has no registered office yet: this is its workspace and seminar venue. 454A with the postcode, as the
+    # operator set it on 12 Nov 2026 (the brief's "454 High Road" is superseded).
+    "address":   "454A High Road, Bruce Grove, Tottenham, London N17 9JD",
     "email":     "admin@hiraminitiative.com",
     "phone":     "+44 7424 271744",
     "instagram": "@thehiraminitiative",
@@ -214,7 +216,7 @@ AOA = {
     "title":    "Age of Agents",
     "subtitle": "An introduction into the creation of AI Agents.",
     "date":     "9th to 11th July 2026, 2pm to 6pm",
-    "venue":    "454 High Road, Bruce Grove, London N17 9JD",
+    "venue":    "454A High Road, Bruce Grove, Tottenham, London N17 9JD",
     "led_by":   "Joseph Falano (Ohjay), with Jalaaldeen Akinola (JRD)",
     "blurb":    "THI's practical introduction to building AI agents: software that decides and acts on your behalf. Three afternoons that take you from what an agent is to creating your own, so you meet the shift as a builder, not a spectator.",
 }
@@ -227,7 +229,7 @@ B2B = {
     "chip":     "20 &amp; 21 November 2026 · From 10am · Tottenham",
     "tagline":  "You have built the foundation. Now it is time to scale.",
     "when":     "Friday 20th &amp; Saturday 21st November 2026, from 10am",
-    "where":    "454 High Road, Bruce Grove, Tottenham, London",
+    "where":    "454A High Road, Bruce Grove, Tottenham, London N17 9JD",
     "entry":    "Free. Registration required.",
     "short":    "Two days that take driven young builders from ideas to fully operational businesses. Expert panels, practical workshops and intensive training in startup architecture, funding, content and the skills that turn work into income.",
     "about": [
@@ -280,7 +282,7 @@ B2B = {
     "page_desc":  "A free two day accelerator in London, 20 &amp; 21 November 2026, turning young builders into business owners. Register now.",
     "share":      "assets/b2b-share.jpg",
     "flyer":      "assets/b2b-flyer.jpg",
-    "flyer_alt":  "The official Builder to Business flyer: The Final Piece, 20 and 21 November 2026, from 10am, 454 High Road, Bruce Grove, Tottenham, London",
+    "flyer_alt":  "The official Builder to Business flyer: The Final Piece, 20 and 21 November 2026, from 10am, Tottenham",   # the artwork's own address line is not repeated
     "video":      "assets/b2b-promo.mp4",
     "poster":     "assets/b2b-promo-poster.jpg",
     "caption":    "Every business starts out as an idea. Join us for Builder to Business: The Final Piece.",
@@ -585,7 +587,7 @@ def footer():
     <h5 style="margin-top:14px">The Hiram Initiative</h5>
     <p>{ORG['tagline']}</p>
     <p style="margin-top:14px">A community of {ORG['audience']} in the United Kingdom who aren't waiting for opportunities, they're creating them.</p>
-    <p class="muted" style="font-size:.82rem;margin-top:14px">Registered office<br>{ORG['address']}</p>
+    <p class="muted" style="font-size:.82rem;margin-top:14px">Workspace and seminar venue<br>{ORG['address']}</p>
   </div>
   <div>
     <h5>The site</h5>
@@ -710,7 +712,7 @@ def home():
   </div>
   <div class="card" style="background:#fafafa">
     <h3>Where we operate</h3>
-    <p class="muted">Registered office, mentorship hub and community base.</p>
+    <p class="muted">Our workspace, seminar venue, mentorship hub and community base.</p>
     <p style="margin-top:14px"><strong>{ORG['address']}</strong></p>
     <p class="muted" style="margin-top:14px;font-size:.92rem">Programmes are delivered across London with a particular focus on accessibility for young people most at risk from technological change.</p>
   </div>
@@ -1001,7 +1003,7 @@ def age_of_agents():
 </div></section>
 """
     page("age-of-agents.html", f"Age of Agents: an introduction to creating AI agents · {ORG['name']}",
-         "Age of Agents, The Hiram Initiative's practical introduction to creating AI agents, 9 to 11 July 2026 at 454 High Road, Bruce Grove, London N17 9JD. Sold out, with over 150 attendees. Led by Joseph Falano (Ohjay) with Jalaaldeen Akinola (JRD).",
+         "Age of Agents, The Hiram Initiative's practical introduction to creating AI agents, 9 to 11 July 2026 at 454A High Road, Bruce Grove, Tottenham, London N17 9JD. Sold out, with over 150 attendees. Led by Joseph Falano (Ohjay) with Jalaaldeen Akinola (JRD).",
          body, "programmes")
 
 def governance():
@@ -1035,7 +1037,7 @@ def governance():
 <div class="sec-head"><span class="eyebrow">The constitution</span><h2>Adopted {ORG['adopted']}</h2>
 <p class="lead">The constitution is the source of truth for how THI is structured, governed and operated. It covers identity, aims, programmes, governance, powers, finances, partnerships, amendments and dissolution.</p></div>
 <div class="grid g2">
-  <div class="card"><h3>Part One: Identity and Purpose</h3><p>Name, registered address, mission, vision, tagline, and the meaning of Hiram.</p></div>
+  <div class="card"><h3>Part One: Identity and Purpose</h3><p>Name, address, mission, vision, tagline, and the meaning of Hiram.</p></div>
   <div class="card"><h3>Part Two: Aims and Objectives</h3><p>The core aim, strategic objectives across the five pillars, and the work on Life Intelligence and Community Access that runs across them.</p></div>
   <div class="card"><h3>Part Three: Programmes and Delivery</h3><p>Workshops, masterclasses, Expert Speaker Series, mentorship matching, networking events, and the 2026 roadmap.</p></div>
   <div class="card"><h3>Part Four: Governance and Committee</h3><p>Committee structure, composition, current committee, and rules for membership, election, appointment by the committee and resignation.</p></div>
@@ -1153,11 +1155,11 @@ def contact():
     <p class="muted">News, threads and updates from the community.</p>
   </div>
 </div>
-<div class="note" style="margin-top:32px"><strong>Registered office.</strong> {ORG['address']}. Visits by appointment, please email ahead.</div>
+<div class="note" style="margin-top:32px"><strong>Workspace and seminar venue.</strong> {ORG['address']}. Visits by appointment, please email ahead.</div>
 </div></section>
 """
     page("contact.html", f"Contact, {ORG['name']}",
-         "Join, mentor, partner, or reach The Hiram Initiative directly. Email, phone, Instagram, X and registered office in Tottenham, London.",
+         "Join, mentor, partner, or reach The Hiram Initiative directly. Email, phone, Instagram, X and our workspace in Tottenham, London.",
          body, "")
 
 def builder_to_business():
@@ -1254,7 +1256,7 @@ def builder_to_business():
 <section><div class="wrap">
 <div class="sec-head"><span class="eyebrow">The B2B series</span><h2>The series so far</h2></div>
 <div class="timeline">{series}</div>
-<img class="photo" src="{B2B['series_img']}" alt="The Beginner to Business workshop poster, 24 October, 454 High Road, Bruce Grove, Tottenham" loading="lazy" style="margin-top:24px">
+<img class="photo" src="{B2B['series_img']}" alt="The Beginner to Business workshop poster, 24 October, Tottenham" loading="lazy" style="margin-top:24px">
 <p class="caption">Beginner to Business, 24 October: the second chapter of the series.</p>
 </div></section>
 
@@ -1276,8 +1278,8 @@ def builder_to_business():
         "startDate": "2026-11-20T10:00:00+00:00", "endDate": "2026-11-21",
         "eventStatus": "https://schema.org/EventScheduled",
         "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-        "location": {"@type": "Place", "name": "454 High Road, Bruce Grove",
-                     "address": {"@type": "PostalAddress", "streetAddress": "454 High Road, Bruce Grove, Tottenham",
+        "location": {"@type": "Place", "name": "454A High Road, Bruce Grove",
+                     "address": {"@type": "PostalAddress", "streetAddress": "454A High Road, Bruce Grove, Tottenham", "postalCode": "N17 9JD",
                                  "addressLocality": "London", "addressCountry": "GB"}},
         "image": [f"{ORG['base_url']}/{B2B['share']}"],
         "organizer": {"@type": "Organization", "name": ORG["name"], "url": ORG["base_url"]},
