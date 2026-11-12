@@ -2,9 +2,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Age of Agents: an introduction to creating AI agents · The Hiram Initiative</title>
-<meta name="description" content="Age of Agents, The Hiram Initiative's hands-on introduction to creating AI agents. 9th to 11th July 2026, 2pm to 6pm, 454A Highroad, Bruce Grove, London N17 9JD. Led by Joseph Falano (Ohjay) with Jalaaldeen Akinola (JRD).">
+<meta name="description" content="Age of Agents, The Hiram Initiative's practical introduction to creating AI agents, 9 to 11 July 2026 at 454 High Road, Bruce Grove, London N17 9JD. Sold out, with over 150 attendees. Led by Joseph Falano (Ohjay) with Jalaaldeen Akinola (JRD).">
 <meta property="og:title" content="Age of Agents: an introduction to creating AI agents · The Hiram Initiative">
-<meta property="og:description" content="Age of Agents, The Hiram Initiative's hands-on introduction to creating AI agents. 9th to 11th July 2026, 2pm to 6pm, 454A Highroad, Bruce Grove, London N17 9JD. Led by Joseph Falano (Ohjay) with Jalaaldeen Akinola (JRD).">
+<meta property="og:description" content="Age of Agents, The Hiram Initiative's practical introduction to creating AI agents, 9 to 11 July 2026 at 454 High Road, Bruce Grove, London N17 9JD. Sold out, with over 150 attendees. Led by Joseph Falano (Ohjay) with Jalaaldeen Akinola (JRD).">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#E67A2C">
 <link rel="icon" type="image/jpeg" href="assets/thi-logo.jpeg">
@@ -115,6 +115,32 @@ section.dark .eyebrow{color:var(--accent)}
 .ff-hero .ff-meta div{background:rgba(0,0,0,.25);padding:14px 18px;border-radius:8px;backdrop-filter:blur(6px)}
 .ff-hero .ff-meta strong{display:block;font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:#cfd9ff;margin-bottom:4px}
 
+/* Builder to Business */
+.b2b-hero{background:var(--ink);color:#fff;padding:80px 0;border-bottom:4px solid var(--accent)}
+.b2b-hero h1{color:#fff;font-size:clamp(2.2rem,6vw,3.8rem);line-height:1.04;margin-top:18px}
+.b2b-hero .tag{font-size:1.3rem;font-weight:600;color:#f3d7c2;margin-top:6px}
+.b2b-chip{display:inline-block;background:var(--accent);color:#fff;padding:6px 14px;font-weight:700;border-radius:4px;letter-spacing:.04em;font-size:.85rem;text-transform:uppercase}
+.b2b-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:center}
+@media (max-width:860px){.b2b-grid{grid-template-columns:1fr}}
+.b2b-logo-card{background:#F6F0E8;border-radius:16px;padding:26px}
+.b2b-meta{display:flex;flex-wrap:wrap;gap:14px;margin-top:26px}
+.b2b-meta div{background:#262626;border:1px solid #333;padding:14px 18px;border-radius:8px}
+.b2b-meta strong{display:block;font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin-bottom:4px}
+.b2b-hero .btn-ghost{border-color:#fff;color:#fff}
+.b2b-hero .btn-ghost:hover{background:#fff;color:var(--ink)}
+.speaker{display:flex;gap:18px;align-items:flex-start}
+.speaker .face{width:96px;height:96px;border-radius:50%;object-fit:cover;flex-shrink:0}
+.speaker .initials{width:96px;height:96px;border-radius:50%;flex-shrink:0;background:var(--accent-lite);color:var(--accent);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.7rem;letter-spacing:.02em}
+.speaker .focus{font-size:.78rem;font-weight:700;color:var(--teal);text-transform:uppercase;letter-spacing:.08em}
+.speaker .talk{font-weight:600;margin:.2em 0 .4em}
+.day ul{margin:10px 0 0;padding-left:18px;line-height:1.9;color:var(--muted)}
+.faq details{border-bottom:1px solid #eee;padding:16px 0}
+.faq summary{cursor:pointer;font-weight:700;font-size:1.02rem}
+.faq details p{margin:.6em 0 0;color:var(--muted)}
+.partner-logo{width:72px;height:72px;border-radius:12px;object-fit:cover;margin-bottom:14px;display:block}
+.photo{width:100%;border-radius:14px;display:block;object-fit:cover}
+.caption{font-size:.85rem;color:var(--muted);margin-top:8px}
+
 /* Footer */
 footer{background:var(--ink);color:#bdbdbd;padding:56px 0 32px}
 footer h5{color:#fff;text-transform:uppercase;font-size:.78rem;letter-spacing:.1em;margin-bottom:14px}
@@ -153,58 +179,67 @@ section.dark .chips span{background:#222;border-color:#444;color:#bdbdbd}
 <meta property="og:url" content="https://www.hiraminitiative.com/age-of-agents"></head><body><header class="nav"><div class="wrap">
 <a class="brand" href="/"><img src="assets/thi-logo.jpeg" alt="The Hiram Initiative" style="width:40px;height:40px;background:#fff;border-radius:6px;padding:3px;box-sizing:border-box;display:block"> <span>The Hiram<span class="bsub">Initiative</span></span></a>
 <button class="navtoggle" aria-label="Menu" onclick="document.getElementById('nl').classList.toggle('open')">≡</button>
-<nav class="navlinks" id="nl"><a href="about">About</a><a href="programmes" class="active">Programmes</a><a href="age-of-agents">Age of Agents</a><a href="frontier-fusion">Frontier Fusion</a><a href="governance">Governance</a><a href="partners">Partners</a>
+<nav class="navlinks" id="nl"><a href="about">About</a><a href="programmes" class="active">Programmes</a><a href="builder-to-business">Builder to Business</a><a href="frontier-fusion">Frontier Fusion</a><a href="governance">Governance</a><a href="partners">Partners</a>
 <a class="cta" href="contact">Get involved</a>
 </nav></div></header>
+<section style="padding:20px 0;background:var(--accent-lite);border-bottom:1px solid #f0d2bb"><div class="wrap">
+<p style="margin:0"><strong>Completed · July 2026.</strong> Thank you to everyone who built with us. Next up is Builder to Business: The Final Piece on 20 &amp; 21 November. <a href="builder-to-business" style="color:var(--accent-dark);font-weight:700">See the event →</a></p>
+</div></section>
+
 <section class="ff-hero"><div class="wrap">
-<span class="ff-chip">9-11 July 2026 · 2-6pm</span>
+<span class="ff-chip">Completed · 9 to 11 July 2026 · 2pm to 6pm</span>
 <h1 style="margin-top:18px">Age of<br>Agents</h1>
 <p style="font-size:1.6rem;margin-top:8px;font-weight:600;color:#dde7ff">An introduction into the creation of AI Agents.</p>
-<p style="font-size:1.1rem;max-width:64ch;margin-top:24px;color:#e7edff">THI's hands-on introduction to building AI agents: software that decides and acts on your behalf. Three afternoons that take you from what an agent is to creating your own, so you meet the shift as a builder, not a spectator.</p>
+<p style="font-size:1.1rem;max-width:64ch;margin-top:24px;color:#e7edff">THI's practical introduction to building AI agents: software that decides and acts on your behalf. Three afternoons that take you from what an agent is to creating your own, so you meet the shift as a builder, not a spectator.</p>
 <div class="ff-meta">
   <div><strong>When</strong>9th to 11th July 2026, 2pm to 6pm</div>
-  <div><strong>Where</strong>454A Highroad, Bruce Grove, London N17 9JD</div>
+  <div><strong>Where</strong>454 High Road, Bruce Grove, London N17 9JD</div>
   <div><strong>Led by</strong>Joseph Falano (Ohjay), with Jalaaldeen Akinola (JRD)</div>
 </div>
 <div class="cta">
-  <a class="btn" style="background:#FFD23F;color:#1A1A1A" href="https://www.instagram.com/thehiraminitiative?igsh=MWl6dDJkOGo1MjF1NA==" target="_blank" rel="noopener">Register (scan the flier QR) ↗</a>
+  <a class="btn" style="background:#FFD23F;color:#1A1A1A" href="builder-to-business">See Builder to Business →</a>
   <a class="btn btn-ghost" style="border-color:#fff;color:#fff" href="programmes">All programmes →</a>
 </div>
 </div></section>
 
-<section><div class="wrap" style="text-align:center">
-<div class="sec-head" style="margin:0 auto"><span class="eyebrow">The event</span><h2>Age of the Agents</h2>
-<p class="lead" style="margin:0 auto 10px">Scan the QR on the flier to register. Places are limited.</p></div>
-<img src="assets/aoa-flier.jpg" alt="Age of the Agents: an introduction into the creation of AI Agents. 9th to 11th July 2026, 2pm to 6pm, 454A Highroad, Bruce Grove, London N17 9JD. Host Joseph Falano (Ohjay), facilitator Jalaaldeen Akinola (JRD)." loading="lazy" style="width:100%;max-width:760px;border-radius:16px;box-shadow:0 14px 46px rgba(0,0,0,.22)">
+<section><div class="wrap">
+<div class="sec-head"><span class="eyebrow">The recap</span><h2>Sold out, three days running</h2>
+<p class="lead">Over 150 people across three days, an average of 40 a day, building AI agents in Tottenham.</p></div>
+<img class="photo" src="assets/aoa-group.jpg" alt="Age of Agents participants together in Tottenham, July 2026" loading="lazy">
+<p class="caption">Age of Agents, Tottenham, July 2026.</p>
 </div></section>
 
 <section class="band"><div class="wrap">
-<div class="sec-head"><span class="eyebrow">What you learn</span><h2>From first principles to your own agent</h2>
-<p class="lead">Four tracks across the three afternoons, taught hands-on by people building in the field.</p></div>
+<div class="sec-head"><span class="eyebrow">What we covered</span><h2>From first principles to your own agent</h2>
+<p class="lead">Four tracks across the three afternoons, taught by people building in the field.</p></div>
 <div class="grid g4">
   <div class="card"><div class="icon-wrap"><svg width="28" height="28" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" stroke-width="1.6" stroke="currentColor" fill="none"/><circle cx="12" cy="12" r="3.5" fill="currentColor"/><circle cx="17" cy="8" r="1" fill="currentColor"/></svg></div><h3>Understand agents</h3><p>What an AI agent actually is, how it reasons and acts, and where it fits alongside the tools you already use.</p></div>
-  <div class="card"><div class="icon-wrap"><svg width="28" height="28" viewBox="0 0 24 24"><path d="M12 3v6M12 15v6M3 12h6M15 12h6M5.5 5.5l4 4M14.5 14.5l4 4M18.5 5.5l-4 4M9.5 14.5l-4 4" stroke-width="1.6" stroke="currentColor" stroke-linecap="round" fill="none"/><circle cx="12" cy="12" r="2.4" fill="currentColor"/></svg></div><h3>Build your first agent</h3><p>Hands-on, from a prompt to a working agent that completes real tasks, with the craft of prompting and tools.</p></div>
+  <div class="card"><div class="icon-wrap"><svg width="28" height="28" viewBox="0 0 24 24"><path d="M12 3v6M12 15v6M3 12h6M15 12h6M5.5 5.5l4 4M14.5 14.5l4 4M18.5 5.5l-4 4M9.5 14.5l-4 4" stroke-width="1.6" stroke="currentColor" stroke-linecap="round" fill="none"/><circle cx="12" cy="12" r="2.4" fill="currentColor"/></svg></div><h3>Build your first agent</h3><p>Practical, from a prompt to a working agent that completes real tasks, with the craft of prompting and tools.</p></div>
   <div class="card"><div class="icon-wrap"><svg width="28" height="28" viewBox="0 0 24 24"><path d="M5 13c0-2 1-4 3-4s3 1 3 3v3l-3 4-3-2v-4zM19 13c0-2-1-4-3-4s-3 1-3 3v3l3 4 3-2v-4z" stroke-width="1.6" stroke="currentColor" fill="none"/></svg></div><h3>Own your agents</h3><p>Operating and owning agents with a mobile phone and an internet connection, no gatekeeper required.</p></div>
-  <div class="card"><div class="icon-wrap"><svg width="28" height="28" viewBox="0 0 24 24"><rect x="3" y="9" width="9" height="6" rx="3" stroke-width="1.6" stroke="currentColor" fill="none"/><rect x="12" y="9" width="9" height="6" rx="3" stroke-width="1.6" stroke="currentColor" fill="none"/><path d="M8 12h8" stroke-width="1.6" stroke="currentColor"/></svg></div><h3>Agents on-chain</h3><p>Where agents meet Solana, payments and Internet Capital Markets, and the new economics that opens up.</p></div>
+  <div class="card"><div class="icon-wrap"><svg width="28" height="28" viewBox="0 0 24 24"><rect x="3" y="9" width="9" height="6" rx="3" stroke-width="1.6" stroke="currentColor" fill="none"/><rect x="12" y="9" width="9" height="6" rx="3" stroke-width="1.6" stroke="currentColor" fill="none"/><path d="M8 12h8" stroke-width="1.6" stroke="currentColor"/></svg></div><h3>Agents on chain</h3><p>Where agents meet Solana, payments and Internet Capital Markets, and the new economics that opens up.</p></div>
 </div>
 </div></section>
 
-<section><div class="wrap">
-<div class="sec-head"><span class="eyebrow">Who it is for</span><h2>Built for beginners, useful to builders</h2>
-<p class="lead">No prior experience needed. We start from first principles and build up, so you leave with an agent you made and the confidence to keep going. Part of THI's mission to put the young people most exposed to technological change at the front of it.</p></div>
-<div class="cta"><a class="btn btn-primary" href="https://www.instagram.com/thehiraminitiative?igsh=MWl6dDJkOGo1MjF1NA==" target="_blank" rel="noopener">Register on Instagram →</a><a class="btn btn-ghost" href="contact">Ask a question →</a></div>
+<section><div class="wrap" style="display:flex;gap:36px;flex-wrap:wrap;align-items:center;justify-content:center">
+  <img src="assets/aoa-flier.jpg" alt="The Age of the Agents flier: an introduction into the creation of AI Agents, 9th to 11th July 2026, hosted by Joseph Falano (Ohjay) with facilitator Jalaaldeen Akinola (JRD)" loading="lazy" style="width:100%;max-width:360px;border-radius:16px;box-shadow:0 14px 46px rgba(0,0,0,.22)">
+  <div style="flex:1;min-width:280px;max-width:460px">
+    <span class="eyebrow">Who it was for</span>
+    <h2>Built for beginners, useful to builders</h2>
+    <p class="lead">No prior experience was needed. We started from first principles and built up, so everyone left with an agent they made and the confidence to keep going.</p>
+    <div class="cta"><a class="btn btn-primary" href="builder-to-business">Next: Builder to Business →</a><a class="btn btn-ghost" href="contact">Ask a question →</a></div>
+  </div>
 </div></section>
 <footer><div class="wrap">
 <div class="fgrid">
   <div><img src="assets/thi-logo.jpeg" alt="The Hiram Initiative" style="width:64px;height:64px;background:#fff;border-radius:6px;padding:3px;box-sizing:border-box;display:block">
     <h5 style="margin-top:14px">The Hiram Initiative</h5>
     <p>Wisdom · Purpose · Impact</p>
-    <p style="margin-top:14px">A community of young people in the United Kingdom who aren't waiting for opportunities, they're creating them.</p>
-    <p class="muted" style="font-size:.82rem;margin-top:14px">Registered office<br>454A High Road, Tottenham, London, N17 9JD</p>
+    <p style="margin-top:14px">A community of young people aged 18 to 35 in the United Kingdom who aren't waiting for opportunities, they're creating them.</p>
+    <p class="muted" style="font-size:.82rem;margin-top:14px">Registered office<br>454 High Road, Tottenham, London, N17 9JD</p>
   </div>
   <div>
     <h5>The site</h5>
-    <ul><li><a href="about">About</a></li><li><a href="programmes">Programmes</a></li><li><a href="age-of-agents">Age of Agents</a></li><li><a href="frontier-fusion">Frontier Fusion</a></li><li><a href="governance">Governance</a></li><li><a href="partners">Partners</a></li><li><a href="contact">Contact</a></li></ul>
+    <ul><li><a href="about">About</a></li><li><a href="programmes">Programmes</a></li><li><a href="builder-to-business">Builder to Business</a></li><li><a href="age-of-agents">Age of Agents</a></li><li><a href="frontier-fusion">Frontier Fusion</a></li><li><a href="governance">Governance</a></li><li><a href="partners">Partners</a></li><li><a href="contact">Contact</a></li></ul>
   </div>
   <div>
     <h5>Five pillars</h5>
@@ -216,6 +251,7 @@ section.dark .chips span{background:#222;border-color:#444;color:#bdbdbd}
       <li><a href="mailto:admin@hiraminitiative.com">admin@hiraminitiative.com</a></li>
       <li><a href="tel:+447424271744">+44 7424 271744</a></li>
       <li><a href="https://www.instagram.com/thehiraminitiative?igsh=MWl6dDJkOGo1MjF1NA==" target="_blank" rel="noopener">Instagram @thehiraminitiative ↗</a></li>
+      <li><a href="https://x.com/thehiramINT" target="_blank" rel="noopener">X @thehiramINT ↗</a></li>
     </ul>
   </div>
 </div>

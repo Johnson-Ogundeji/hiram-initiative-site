@@ -115,6 +115,32 @@ section.dark .eyebrow{color:var(--accent)}
 .ff-hero .ff-meta div{background:rgba(0,0,0,.25);padding:14px 18px;border-radius:8px;backdrop-filter:blur(6px)}
 .ff-hero .ff-meta strong{display:block;font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:#cfd9ff;margin-bottom:4px}
 
+/* Builder to Business */
+.b2b-hero{background:var(--ink);color:#fff;padding:80px 0;border-bottom:4px solid var(--accent)}
+.b2b-hero h1{color:#fff;font-size:clamp(2.2rem,6vw,3.8rem);line-height:1.04;margin-top:18px}
+.b2b-hero .tag{font-size:1.3rem;font-weight:600;color:#f3d7c2;margin-top:6px}
+.b2b-chip{display:inline-block;background:var(--accent);color:#fff;padding:6px 14px;font-weight:700;border-radius:4px;letter-spacing:.04em;font-size:.85rem;text-transform:uppercase}
+.b2b-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:center}
+@media (max-width:860px){.b2b-grid{grid-template-columns:1fr}}
+.b2b-logo-card{background:#F6F0E8;border-radius:16px;padding:26px}
+.b2b-meta{display:flex;flex-wrap:wrap;gap:14px;margin-top:26px}
+.b2b-meta div{background:#262626;border:1px solid #333;padding:14px 18px;border-radius:8px}
+.b2b-meta strong{display:block;font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin-bottom:4px}
+.b2b-hero .btn-ghost{border-color:#fff;color:#fff}
+.b2b-hero .btn-ghost:hover{background:#fff;color:var(--ink)}
+.speaker{display:flex;gap:18px;align-items:flex-start}
+.speaker .face{width:96px;height:96px;border-radius:50%;object-fit:cover;flex-shrink:0}
+.speaker .initials{width:96px;height:96px;border-radius:50%;flex-shrink:0;background:var(--accent-lite);color:var(--accent);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.7rem;letter-spacing:.02em}
+.speaker .focus{font-size:.78rem;font-weight:700;color:var(--teal);text-transform:uppercase;letter-spacing:.08em}
+.speaker .talk{font-weight:600;margin:.2em 0 .4em}
+.day ul{margin:10px 0 0;padding-left:18px;line-height:1.9;color:var(--muted)}
+.faq details{border-bottom:1px solid #eee;padding:16px 0}
+.faq summary{cursor:pointer;font-weight:700;font-size:1.02rem}
+.faq details p{margin:.6em 0 0;color:var(--muted)}
+.partner-logo{width:72px;height:72px;border-radius:12px;object-fit:cover;margin-bottom:14px;display:block}
+.photo{width:100%;border-radius:14px;display:block;object-fit:cover}
+.caption{font-size:.85rem;color:var(--muted);margin-top:8px}
+
 /* Footer */
 footer{background:var(--ink);color:#bdbdbd;padding:56px 0 32px}
 footer h5{color:#fff;text-transform:uppercase;font-size:.78rem;letter-spacing:.1em;margin-bottom:14px}
@@ -153,18 +179,19 @@ section.dark .chips span{background:#222;border-color:#444;color:#bdbdbd}
 <meta property="og:url" content="https://www.hiraminitiative.com/"></head><body><header class="nav"><div class="wrap">
 <a class="brand" href="/"><img src="assets/thi-logo.jpeg" alt="The Hiram Initiative" style="width:40px;height:40px;background:#fff;border-radius:6px;padding:3px;box-sizing:border-box;display:block"> <span>The Hiram<span class="bsub">Initiative</span></span></a>
 <button class="navtoggle" aria-label="Menu" onclick="document.getElementById('nl').classList.toggle('open')">≡</button>
-<nav class="navlinks" id="nl"><a href="about">About</a><a href="programmes">Programmes</a><a href="age-of-agents">Age of Agents</a><a href="frontier-fusion">Frontier Fusion</a><a href="governance">Governance</a><a href="partners">Partners</a>
+<nav class="navlinks" id="nl"><a href="about">About</a><a href="programmes">Programmes</a><a href="builder-to-business">Builder to Business</a><a href="frontier-fusion">Frontier Fusion</a><a href="governance">Governance</a><a href="partners">Partners</a>
 <a class="cta" href="contact">Get involved</a>
 </nav></div></header>
 <section class="hero"><div class="wrap">
 <span class="eyebrow orange">Wisdom · Purpose · Impact</span>
 <h1>A generation that is not waiting for opportunities.<br><em>They are creating them.</em></h1>
 <p class="thesis">Hiram did not build the Temple. He equipped the people who did. That is what The Hiram Initiative is doing for this generation.</p>
-<p class="lead">The Hiram Initiative exists to bridge the gap between traditional education and the rapidly evolving demands of the modern world, through hands-on education in IT, AI, blockchain, content creation and entrepreneurship, direct access to industry professionals, and a community built around shared purpose.</p>
+<p class="lead">The Hiram Initiative exists to bridge the gap between traditional education and the rapidly evolving demands of the modern world, through practical education in IT, AI, blockchain, content creation and entrepreneurship, direct access to industry professionals, and a community built around shared purpose.</p>
 <div class="cta">
   <a class="btn btn-primary" href="programmes">See the programmes →</a>
-  <a class="btn btn-ghost" href="age-of-agents">Age of Agents · 9–11 Jul ↗</a>
+  <a class="btn btn-ghost" href="builder-to-business">Builder to Business · 20 &amp; 21 Nov ↗</a>
 </div>
+<div class="stats"><div class="stat"><div class="big">~250</div><div class="lbl">active members in our WhatsApp community</div></div><div class="stat"><div class="big">150+</div><div class="lbl">attendees across the three days of Age of Agents</div></div><div class="stat"><div class="big">8</div><div class="lbl">working products built in 14 days in the Build With AI Challenge</div></div><div class="stat"><div class="big">18 to 35</div><div class="lbl">the ages of the young people we serve</div></div></div>
 </div></section>
 
 <section class="band"><div class="wrap">
@@ -175,24 +202,29 @@ section.dark .chips span{background:#222;border-color:#444;color:#bdbdbd}
 
 <section><div class="wrap">
 <div class="sec-head"><span class="eyebrow">Programmes</span><h2>How we deliver</h2>
-<p class="lead">Five running programmes, each grounded in practice, led by people who have done the thing they teach.</p></div>
-<div class="bullet"><div class="b-num">01</div><div class="b-body"><h4>Age of Agents</h4><p>Our new flagship programme on the AI agents reshaping work and ownership. Understand them, build your first one, and learn to own and operate them with a phone and an internet connection.</p></div></div><div class="bullet"><div class="b-num">02</div><div class="b-body"><h4>Workshops &amp; Masterclasses</h4><p>Deep-dive sessions on specific topics in IT, AI, blockchain, content creation, entrepreneurship and life intelligence, led by industry practitioners. Hands-on, practical, and directly applicable to real-world situations.</p></div></div><div class="bullet"><div class="b-num">03</div><div class="b-body"><h4>Expert Speaker Series</h4><p>Regular talks and Q&amp;A with founders, innovators, developers and thought leaders sharing their journeys, insights and real-world experience at the frontier of their fields.</p></div></div><div class="bullet"><div class="b-num">04</div><div class="b-body"><h4>One-to-One Mentorship Matching</h4><p>Personalised pairing of members with experienced professionals for ongoing guidance, accountability and support, the kind that changes the direction of careers and businesses.</p></div></div><div class="bullet"><div class="b-num">05</div><div class="b-body"><h4>Networking &amp; Community Events</h4><p>Curated gatherings that connect members with peers, mentors and collaborators in their fields of interest, including the annual Frontier Fusion event.</p></div></div><div class="bullet"><div class="b-num">06</div><div class="b-body"><h4>Online Resources &amp; Learning Platform</h4><p>Accessible educational content, recorded sessions, curated materials and a digital resource library available to all members.</p></div></div>
+<p class="lead">Six running programmes, each grounded in practice, led by people who have done the thing they teach.</p></div>
+<div class="bullet"><div class="b-num">01</div><div class="b-body"><h4>The B2B Series</h4><p>Our journey from beginner to business owner. Beginner to Builder taught AI fundamentals and agent building. Beginner to Business brought founders into the room. Builder to Business completes the journey.</p></div></div><div class="bullet"><div class="b-num">02</div><div class="b-body"><h4>Workshops &amp; Masterclasses</h4><p>In depth sessions on specific topics in IT, AI, blockchain, content creation, entrepreneurship and life intelligence, led by industry practitioners. Practical and directly applicable to real situations.</p></div></div><div class="bullet"><div class="b-num">03</div><div class="b-body"><h4>Expert Speaker Series</h4><p>Regular talks and Q&amp;A with founders, innovators, developers and thought leaders sharing their journeys, insights and real world experience at the frontier of their fields.</p></div></div><div class="bullet"><div class="b-num">04</div><div class="b-body"><h4>One to One Mentorship Matching</h4><p>Personalised pairing of members with experienced professionals for ongoing guidance, accountability and support, the kind that changes the direction of careers and businesses.</p></div></div><div class="bullet"><div class="b-num">05</div><div class="b-body"><h4>Networking &amp; Community Events</h4><p>Curated gatherings that connect members with peers, mentors and collaborators in their fields of interest, including the annual Frontier Fusion event.</p></div></div><div class="bullet"><div class="b-num">06</div><div class="b-body"><h4>Online Resources &amp; Learning Platform</h4><p>Accessible educational content, recorded sessions, curated materials and a digital resource library available to all members.</p></div></div>
 <div class="cta"><a class="btn btn-primary" href="programmes">The 2026 roadmap →</a></div>
 </div></section>
 
-<section class="ff-hero"><div class="wrap">
-<span class="ff-chip">Next up · #savethedate</span>
-<h1 style="margin-top:18px">Age of Agents <span style="display:block;font-size:.5em;font-weight:600;opacity:.9">An introduction into the creation of AI Agents.</span></h1>
-<p style="font-size:1.15rem;max-width:60ch;margin-top:18px;color:#dde7ff">THI's hands-on introduction to building AI agents: software that decides and acts on your behalf. Three afternoons that take you from what an agent is to creating your own, so you meet the shift as a builder, not a spectator.</p>
-<div class="ff-meta">
-  <div><strong>When</strong>9th to 11th July 2026, 2pm to 6pm</div>
-  <div><strong>Where</strong>454A Highroad, Bruce Grove, London N17 9JD</div>
-  <div><strong>Led by</strong>Joseph Falano (Ohjay), with Jalaaldeen Akinola (JRD)</div>
+<section class="b2b-hero"><div class="wrap b2b-grid">
+<div>
+<span class="b2b-chip">Next up · The Final Piece</span>
+<h1>Builder to Business</h1>
+<p class="tag">The final chapter of the B2B series.</p>
+<p style="font-size:1.1rem;max-width:60ch;margin-top:16px;color:#e6e6e6">Two days that take driven young builders from ideas to fully operational businesses. Expert panels, practical workshops and intensive training in startup architecture, funding, content and the skills that turn work into income.</p>
+<div class="b2b-meta">
+  <div><strong>When</strong>Friday 20th &amp; Saturday 21st November 2026, from 10am</div>
+  <div><strong>Where</strong>454 High Road, Bruce Grove, Tottenham, London</div>
+  <div><strong>Speakers</strong>Mark Physsas, Jay Chen, Maryann Enereba, Sodiq Davies and Nathan Vandy</div>
 </div>
+<p style="margin-top:18px;color:#f3d7c2;font-weight:600">Free entry. Registration required.</p>
 <div class="cta">
-  <a class="btn btn-ff" style="background:#FFD23F;color:#1A1A1A" href="age-of-agents">Event details →</a>
-  <a class="btn btn-ghost" style="border-color:#fff;color:#fff" href="https://www.instagram.com/thehiraminitiative?igsh=MWl6dDJkOGo1MjF1NA==" target="_blank" rel="noopener">Register via Instagram ↗</a>
+  <a class="btn btn-ghost" href="builder-to-business">Event details →</a>
+  <a class="btn btn-primary" href="https://luma.com/gitdjnje" target="_blank" rel="noopener">Register now ↗</a>
 </div>
+</div>
+<div class="b2b-logo-card"><img src="assets/b2b-logo.png" alt="Builder to Business: The Final Piece" style="width:100%"></div>
 </div></section>
 
 <section><div class="wrap">
@@ -207,7 +239,7 @@ section.dark .chips span{background:#222;border-color:#444;color:#bdbdbd}
   <div class="card" style="background:#fafafa">
     <h3>Where we operate</h3>
     <p class="muted">Registered office, mentorship hub and community base.</p>
-    <p style="margin-top:14px"><strong>454A High Road, Tottenham, London, N17 9JD</strong></p>
+    <p style="margin-top:14px"><strong>454 High Road, Tottenham, London, N17 9JD</strong></p>
     <p class="muted" style="margin-top:14px;font-size:.92rem">Programmes are delivered across London with a particular focus on accessibility for young people most at risk from technological change.</p>
   </div>
 </div>
@@ -217,12 +249,12 @@ section.dark .chips span{background:#222;border-color:#444;color:#bdbdbd}
   <div><img src="assets/thi-logo.jpeg" alt="The Hiram Initiative" style="width:64px;height:64px;background:#fff;border-radius:6px;padding:3px;box-sizing:border-box;display:block">
     <h5 style="margin-top:14px">The Hiram Initiative</h5>
     <p>Wisdom · Purpose · Impact</p>
-    <p style="margin-top:14px">A community of young people in the United Kingdom who aren't waiting for opportunities, they're creating them.</p>
-    <p class="muted" style="font-size:.82rem;margin-top:14px">Registered office<br>454A High Road, Tottenham, London, N17 9JD</p>
+    <p style="margin-top:14px">A community of young people aged 18 to 35 in the United Kingdom who aren't waiting for opportunities, they're creating them.</p>
+    <p class="muted" style="font-size:.82rem;margin-top:14px">Registered office<br>454 High Road, Tottenham, London, N17 9JD</p>
   </div>
   <div>
     <h5>The site</h5>
-    <ul><li><a href="about">About</a></li><li><a href="programmes">Programmes</a></li><li><a href="age-of-agents">Age of Agents</a></li><li><a href="frontier-fusion">Frontier Fusion</a></li><li><a href="governance">Governance</a></li><li><a href="partners">Partners</a></li><li><a href="contact">Contact</a></li></ul>
+    <ul><li><a href="about">About</a></li><li><a href="programmes">Programmes</a></li><li><a href="builder-to-business">Builder to Business</a></li><li><a href="age-of-agents">Age of Agents</a></li><li><a href="frontier-fusion">Frontier Fusion</a></li><li><a href="governance">Governance</a></li><li><a href="partners">Partners</a></li><li><a href="contact">Contact</a></li></ul>
   </div>
   <div>
     <h5>Five pillars</h5>
@@ -234,6 +266,7 @@ section.dark .chips span{background:#222;border-color:#444;color:#bdbdbd}
       <li><a href="mailto:admin@hiraminitiative.com">admin@hiraminitiative.com</a></li>
       <li><a href="tel:+447424271744">+44 7424 271744</a></li>
       <li><a href="https://www.instagram.com/thehiraminitiative?igsh=MWl6dDJkOGo1MjF1NA==" target="_blank" rel="noopener">Instagram @thehiraminitiative ↗</a></li>
+      <li><a href="https://x.com/thehiramINT" target="_blank" rel="noopener">X @thehiramINT ↗</a></li>
     </ul>
   </div>
 </div>

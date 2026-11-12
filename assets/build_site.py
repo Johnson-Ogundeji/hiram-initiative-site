@@ -4,7 +4,8 @@ The Hiram Initiative, static site generator.
 
 Renders the website/ directory from content sourced directly from
 the constitution (adopted 13 May 2026), the AGM minutes (13 April 2026),
-and the Frontier Fusion event poster. Run:
+the Frontier Fusion event poster, the Builder to Business website update
+brief (6 November 2026) and THI's funding pitch (October 2026). Run:
 
     python3 assets/build_site.py
 
@@ -28,11 +29,16 @@ ORG = {
     "short":     "THI",
     "tagline":   "Wisdom · Purpose · Impact",
     "thesis":    "Hiram did not build the Temple. He equipped the people who did. That is what The Hiram Initiative is doing for this generation.",
-    "address":   "454A High Road, Tottenham, London, N17 9JD",
+    "address":   "454 High Road, Tottenham, London, N17 9JD",
     "email":     "admin@hiraminitiative.com",
     "phone":     "+44 7424 271744",
     "instagram": "@thehiraminitiative",
     "instagram_url": "https://www.instagram.com/thehiraminitiative?igsh=MWl6dDJkOGo1MjF1NA==",
+    "x":         "@thehiramINT",
+    "x_url":     "https://x.com/thehiramINT",
+    "register_url": "https://luma.com/gitdjnje",   # Builder to Business registration (brief, 6 Nov 2026)
+    "audience":  "young people aged 18 to 35",
+    "base_url":  "https://hiraminitiative.com",     # the CNAME host, for absolute share image links
     "website":   "www.hiraminitiative.com",
     "adopted":   "13 May 2026",
     "agm":       "13 April 2026",
@@ -54,13 +60,13 @@ MUTED       = "#5A5A5A"
 # Content, sourced directly from constitution / AGM / poster
 # ---------------------------------------------------------------------------
 COMMITTEE = [
-    ("Johnson Ogundeji", "Chairperson", "Overall leadership and strategic direction; 2026 roadmap; partnerships strategy."),
-    ("Joseph Falano",    "Secretary",   "Administration, records, communications; Expert Speaker Series; Mentorship Matching programme."),
+    ("Johnson Ogúndèjì", "Chairperson", "Overall leadership and strategic direction; 2026 roadmap; partnerships strategy."),
+    ("Joseph Falano (Ohjay)", "Cofounder and Secretary", "Administration, records, communications; Expert Speaker Series; Mentorship Matching programme."),
     ("Daniel Dickson",   "Treasurer",   "Financial management and reporting, in accordance with Section 4.2 of the constitution."),
 ]
 VOLUNTEERS = [
-    ("Victor Emovon",   "Mentorship matching, operating the One-to-One Mentorship Matching programme that pairs members with industry practitioners"),
-    ("David Tetede",    "Career pathways · technology-sector accountability"),
+    ("Victor Emovon",   "Mentorship matching, operating the One to One Mentorship Matching programme that pairs members with industry practitioners"),
+    ("David Tetede",    "Career pathways · technology sector accountability"),
     ("Bankole Olamide", "Awareness and representation for excluded communities"),
 ]
 
@@ -74,8 +80,8 @@ PILLARS = [
         "points": [
             ("Accessible IT training",         "Foundational digital skills required in every modern workplace and business."),
             ("Inclusive curriculum",            "Introductions into AI concepts, digital literacy and practical technology skills, designed for those most at risk from technological change, including underrepresented and minority communities."),
-            ("Hands-on workshops",              "Educational exhibits, seminars and labs that show different aspects of IT across employment, with practical materials participants can apply immediately."),
-            ("Targeted, measurable delivery",   "Clear objectives, plain-language formats, highlighting how society is being impacted by IT and how young people can position themselves to benefit."),
+            ("Practical workshops",             "Educational exhibits, seminars and labs that show different aspects of IT across employment, with practical materials participants can apply immediately."),
+            ("Targeted, measurable delivery",   "Clear objectives, plain language formats, highlighting how society is being impacted by IT and how young people can position themselves to benefit."),
         ],
     },
     {
@@ -85,10 +91,10 @@ PILLARS = [
         "icon": "spark",
         "tagline": "Practical AI for real careers, real income, real impact.",
         "points": [
-            ("Practical AI education",     "Real-world applications, ethical considerations, prompt engineering, AI tools and the emerging career and income opportunities AI is creating."),
+            ("Practical AI education",     "Real world applications, ethical considerations, prompt engineering, AI tools and the emerging career and income opportunities AI is creating."),
             ("Applicable AI skills",        "Using AI for content creation, freelance services, business automation and productivity, skills that translate directly into work."),
-            ("Speed-of-the-field updates",  "Continuously refreshed curriculum and programming so members keep pace with the latest developments."),
-            ("Address the skills gap",      "Preparing young people for the AI-driven economy the UK government is investing billions into building."),
+            ("Updates at the speed of the field", "Continuously refreshed curriculum and programming so members keep pace with the latest developments."),
+            ("Address the skills gap",      "Preparing young people for the AI driven economy the UK government is investing billions into building."),
         ],
     },
     {
@@ -114,7 +120,7 @@ PILLARS = [
             ("Skilled creators",            "Use digital tools, AI and modern platforms to build audiences, communicate ideas and create income."),
             ("Content strategy &amp; brand",    "Storytelling and personal branding as core professional skills that translate across every industry and career path."),
             ("Tech × creativity",           "Combine AI tools, blockchain and digital platforms to build sustainable creative careers and businesses."),
-            ("Production craft",            "Video, written content, social media strategy and audience-building, taught by practitioners with real-world experience."),
+            ("Production craft",            "Video, written content, social media strategy and audience building, taught by practitioners with real world experience."),
         ],
     },
     {
@@ -138,7 +144,7 @@ CROSS_CUTTING = [
         "name": "Life Intelligence &amp; Modern Thinking",
         "items": [
             ("Critical thinking, EQ, adaptability", "Foundational skills for navigating a complex and rapidly changing world."),
-            ("Decision-making frameworks",          "First-principles thinking, inversion, second-order thinking, tools that apply across business, relationships and personal development."),
+            ("Decision making frameworks",          "First principles thinking, inversion, second order thinking, tools that apply across business, relationships and personal development."),
             ("Personal development",                "Goal setting, leadership skills, self mastery and the mindset required to create meaningful impact."),
         ],
     },
@@ -156,17 +162,17 @@ ROADMAP = [
     ("Q1 2026", "Launch four foundational workshops on blockchain and AI fundamentals. Onboard the first cohort of members and establish the mentorship matching programme."),
     ("Q2 2026", "Host six masterclasses with industry experts across the five pillars. Launch the online resource platform and expand community reach."),
     ("Q3 2026", "Deliver eight specialised seminars on advanced topics across IT, AI, blockchain, content creation and entrepreneurship. Facilitate the first major networking summit connecting members with the broader technology and Web3 community."),
-    ("Q4 2026", "Complete the full year's programming cycle and showcase member projects and success stories. Plan the 2027 expansion based on outcomes, member feedback and community growth."),
+    ("Q4 2026", "Deliver Builder to Business, The Final Piece, the two day finale of the B2B series, on 20 &amp; 21 November. Complete the full year's programming cycle and showcase member projects and success stories. Plan the 2027 expansion based on outcomes, member feedback and community growth."),
 ]
 
 PROGRAMMES = [
-    ("Age of Agents",
-     "Our new flagship programme on the AI agents reshaping work and ownership. Understand them, build your first one, and learn to own and operate them with a phone and an internet connection."),
+    ("The B2B Series",
+     "Our journey from beginner to business owner. Beginner to Builder taught AI fundamentals and agent building. Beginner to Business brought founders into the room. Builder to Business completes the journey."),
     ("Workshops &amp; Masterclasses",
-     "Deep-dive sessions on specific topics in IT, AI, blockchain, content creation, entrepreneurship and life intelligence, led by industry practitioners. Hands-on, practical, and directly applicable to real-world situations."),
+     "In depth sessions on specific topics in IT, AI, blockchain, content creation, entrepreneurship and life intelligence, led by industry practitioners. Practical and directly applicable to real situations."),
     ("Expert Speaker Series",
-     "Regular talks and Q&amp;A with founders, innovators, developers and thought leaders sharing their journeys, insights and real-world experience at the frontier of their fields."),
-    ("One-to-One Mentorship Matching",
+     "Regular talks and Q&amp;A with founders, innovators, developers and thought leaders sharing their journeys, insights and real world experience at the frontier of their fields."),
+    ("One to One Mentorship Matching",
      "Personalised pairing of members with experienced professionals for ongoing guidance, accountability and support, the kind that changes the direction of careers and businesses."),
     ("Networking &amp; Community Events",
      "Curated gatherings that connect members with peers, mentors and collaborators in their fields of interest, including the annual Frontier Fusion event."),
@@ -176,7 +182,7 @@ PROGRAMMES = [
 
 PARTNERS_BENEFITS = [
     ("Brand recognition",       "Logo placement and acknowledgement across events, platforms and materials."),
-    ("Community access",        "Connection to a network of motivated, technology-literate young professionals."),
+    ("Community access",        "Connection to a network of motivated, technology literate young professionals."),
     ("Impact reporting",        "Regular updates on how investment is creating real, measurable change."),
     ("Speaking opportunities",  "Share the organisation's story and values with the THI community."),
     ("Talent pipeline",         "Early access to emerging talent from the THI member base."),
@@ -184,40 +190,111 @@ PARTNERS_BENEFITS = [
     ("Exclusive event invitations", "Flagship programmes and networking events, including Frontier Fusion."),
 ]
 
-# Confirmed Frontier Fusion 2026 partners (from the event poster).
+# Partners and collaborators (Builder to Business brief, 6 Nov 2026, p.07; logos from THI's pitch, Oct 2026).
+# EdenFi joins this list only once the partnership is signed and announced (the brief); the heading then becomes
+# "Our partners".
 PARTNERS_CONFIRMED = [
-    ("On Chain Brits",  "UK on-chain community partner: Frontier Fusion 2026."),
-    ("Superteam UK",    "Solana ecosystem in the UK: Frontier Fusion 2026."),
-    ("Gosen Inc.",      "Frontier Fusion 2026 supporter."),
-    ("OhJay",           "Frontier Fusion 2026 supporter."),
+    ("OnChainBrits",  "Frontier Fusion cohost.",                    "assets/partner-onchainbrits.png"),
+    ("Superteam UK",  "Frontier Fusion cohost.",                    "assets/partner-superteam-uk.png"),
+    ("Encode Club",   "Venue and community collaborator.",          "assets/partner-encode-club.png"),
+    ("Gosen Inc.",    "Supporter.",                                 "assets/partner-gosen.png"),
 ]
 
 FRONTIER = {
     "title":   "Frontier Fusion",
-    "subtitle":"AI &amp; On-Chain Innovation",
+    "subtitle":"AI &amp; On Chain Innovation",
     "date":    "Friday, 15 May 2026",
     "venue":   "Encode Hub, 41 Pitfield St, London N1 6DA",
-    "blurb":   "THI's flagship annual gathering, bringing together AI, on-chain and creator communities for a night of talks, demos and connections at the frontier of where technology is going next. Hosted in partnership with On Chain Brits and Superteam UK.",
+    "blurb":   "THI's flagship annual gathering, bringing together AI, on chain and creator communities for a night of talks, demos and connections at the frontier of where technology is going next. Hosted in partnership with On Chain Brits and Superteam UK.",
     "rsvp":    "instagram",  # poster's QR points to Instagram
 }
 
-# Age of Agents — the NEXT (upcoming) programme, featured on the home page.
-# Frontier Fusion (15 May 2026) has passed and now lives as a recap.
+# Age of Agents (9 to 11 July 2026): completed; its page now points to Builder to Business (brief p.04).
 AOA = {
     "title":    "Age of Agents",
     "subtitle": "An introduction into the creation of AI Agents.",
     "date":     "9th to 11th July 2026, 2pm to 6pm",
-    "venue":    "454A Highroad, Bruce Grove, London N17 9JD",
+    "venue":    "454 High Road, Bruce Grove, London N17 9JD",
     "led_by":   "Joseph Falano (Ohjay), with Jalaaldeen Akinola (JRD)",
-    "blurb":    "THI's hands-on introduction to building AI agents: software that decides and acts on your behalf. Three afternoons that take you from what an agent is to creating your own, so you meet the shift as a builder, not a spectator.",
+    "blurb":    "THI's practical introduction to building AI agents: software that decides and acts on your behalf. Three afternoons that take you from what an agent is to creating your own, so you meet the shift as a builder, not a spectator.",
 }
+
+# Builder to Business: The Final Piece. Copy from the Builder to Business website update brief (6 Nov 2026);
+# speaker portraits for three of the five from THI's pitch (Oct 2026); the other two show initials until the asset
+# pack's headshots arrive.
+B2B = {
+    "title":    "Builder to Business: The Final Piece",
+    "chip":     "20 &amp; 21 November 2026 · From 10am · Tottenham",
+    "tagline":  "You have built the foundation. Now it is time to scale.",
+    "when":     "Friday 20th &amp; Saturday 21st November 2026, from 10am",
+    "where":    "454 High Road, Bruce Grove, Tottenham, London",
+    "entry":    "Free. Registration required.",
+    "short":    "Two days that take driven young builders from ideas to fully operational businesses. Expert panels, practical workshops and intensive training in startup architecture, funding, content and the skills that turn work into income.",
+    "about": [
+        "Builder to Business is the final chapter of The Hiram Initiative's B2B series, following Beginner to Builder, our virtual AI programme, and Beginner to Business, our in person workshop.",
+        "Across two days, we bring together founders, funders, industry experts and strategists to turn driven young builders into fully operational business owners. This is not a seminar. It is a practical accelerator of expert sessions, workshops and intensive training focused on real growth and strategic positioning.",
+    ],
+    "learn": [
+        ("Startup Architecture",     "Structure and operationalise your startup to last.", "ledger"),
+        ("Funding and Sponsorships", "Position yourself to source, pitch and secure funding and partnerships.", "globe"),
+        ("Content as Currency",      "Use content and digital storytelling to market your product, build authority and attract loyal clients.", "lens"),
+        ("Live Workshops",           "Practical sessions in business model generation and video editing.", "hands"),
+        ("Product Showcases",        "See real products built by real builders, and meet the founders behind them.", "rocket"),
+    ],
+    "for":      "Young people aged 18 to 35, builders, creators and early stage founders ready to turn skills and ideas into a working business. Whether you are scaling a service, launching a product or positioning your brand for investment, this is your toolkit, your network and your roadmap. Completed Beginner to Builder? This is your next step.",
+    "speakers": [
+        ("Mark Physsas", "Startup Architecture and Funding", "Positioning Your Startup for Investment in a Digital Economy",
+         "Web3 strategist and advisor, former architecture studio founder and cofounder of OnChainBrits.", "assets/speaker-mark-physsas.jpg"),
+        ("Jay Chen", "Funding and Sponsorships", "Funding Opportunities: Finding and Securing the Right Capital",
+         "Leads Christians in Web3 UK and is building Ecclesia Ventures, helping faith driven founders build ventures for Kingdom impact.", "assets/speaker-jay-chen.jpg"),
+        ("Maryann Enereba", "Content as Currency", "Content as Currency: Digital Storytelling That Builds Brands",
+         "Digital storyteller, professional photographer and founder of Telling Reel Stories. CNN Academy trained fellow.", "assets/speaker-maryann-enereba.jpg"),
+        ("Sodiq Davies", "Startup Architecture", "Shipping Faster with AI: Delivery Habits That Turn Ideas into Products",
+         "Delivery leader with 9+ years in technology delivery, leading a portfolio of around £3M at Jaguar Land Rover, with a focus on AI augmented delivery.", None),
+        ("Nathan Vandy", "Startup Architecture and Funding", "Building a Company Investors Trust: Lessons on Structure, Funding and Partnerships",
+         "Cofounder and CEO of bond.credit. Previously led the DAO at DappRadar and was Managing Director of the TrueFi Foundation.", None),
+    ],
+    "days": [
+        ("Day 1 · Friday 20 November", "Startup Architecture",
+         ["THI: who we are and what we do", "Sodiq Davies", "Mark Physsas", "Workshop: Business Model Generation", "Product showcase", "Games and networking"]),
+        ("Day 2 · Saturday 21 November", "Funding and Content",
+         ["Jay Chen", "Nathan Vandy", "Maryann Enereba", "Workshop: Video Editing", "Product showcase", "Speaker Q&amp;A panel"]),
+    ],
+    "showcases": [("EdenFi", "Ezra Akran"), ("Gosen Inc.", "Daniel Dickson"), ("Frontier Tech Jobs", "Mark Physsas"),
+                  ("Church Force", "Pastor Dami Sayinbola"), ("Signetify", "Pastor Johnson")],
+    "guest":    ("Pastor Mary McCauley", "Senior Pastor of RCCG True Vine Centre, Croydon, and founder of the Alive and Happening youth camp."),
+    "faq": [
+        ("Is it free?", "Yes. Entry is free, but registration is required."),
+        ("Do I need to attend both days?", "We recommend it. Each day covers different focus areas, and together they form the full experience."),
+        ("Do I need experience?", "No. If you are building something, or ready to start, you will find practical value here."),
+        ("What should I bring?", "A laptop or smartphone for the practical workshops, and ideas you want to build on."),
+        ("I missed the earlier B2B sessions. Can I still come?", "Yes. Builder to Business stands on its own, and everyone is welcome."),
+    ],
+    # The series so far (THI's pitch, Oct 2026, "From beginner to business owner")
+    "series": [
+        ("01 · Virtual · October", "Beginner to Builder", "AI fundamentals and building AI agents, every Saturday."),
+        ("02 · In person · 24 October", "Beginner to Business", "Workshop with Johnson Ogúndèjì and Daniel Dickson."),
+        ("03 · Finale · 20 to 21 November", "Builder to Business", "A free two day accelerator for around 120 builders."),
+    ],
+    "page_title": "Builder to Business: The Final Piece · The Hiram Initiative",
+    "page_desc":  "A free two day accelerator in London, 20 &amp; 21 November 2026, turning young builders into business owners. Register now.",
+    "share":      "assets/b2b-share.jpg",
+}
+
+# Community in numbers (brief p.06, site wide details)
+STATS = [
+    ("~250", "active members in our WhatsApp community"),
+    ("150+", "attendees across the three days of Age of Agents"),
+    ("8",    "working products built in 14 days in the Build With AI Challenge"),
+    ("18 to 35", "the ages of the young people we serve"),
+]
 
 # Financial governance principles (Constitution Part Six + AGM §6)
 GOVERNANCE = [
-    ("Two-signatory rule",
-     "All payments and bank instructions must be signed by at least two authorised committee members. The Community Current Account at Metro Bank operates with three named signatories (Chairperson, Secretary, Treasurer) and a strict any-two-of-three signing rule for every withdrawal, transfer, cheque, standing order, direct debit and electronic payment."),
+    ("Two signatory rule",
+     "All payments and bank instructions must be signed by at least two authorised committee members. The Community Current Account at Metro Bank operates with three named signatories (Chairperson, Secretary, Treasurer) and a strict any two of three signing rule for every withdrawal, transfer, cheque, standing order, direct debit and electronic payment."),
     ("No personal benefit",
-     "No committee member receives any payment or financial benefit from the organisation, other than reasonable out-of-pocket expenses incurred in the course of their duties."),
+     "No committee member receives any payment or financial benefit from the organisation, other than reasonable out of pocket expenses incurred in the course of their duties."),
     ("Accurate records",
      "The Treasurer, with the Secretary, keeps accurate financial records covering income, expenditure and assets."),
     ("Funds used to further the aims",
@@ -267,7 +344,11 @@ def thi_mark(size=44, inverted=False):
 # ---------------------------------------------------------------------------
 # Shared HTML scaffolding
 # ---------------------------------------------------------------------------
-def head(title, desc):
+def head(title, desc, image=None):
+    share = (f'<meta property="og:image" content="{ORG["base_url"]}/{image}">\n'
+             f'<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">\n'
+             f'<meta name="twitter:card" content="summary_large_image">\n'
+             f'<meta name="twitter:image" content="{ORG["base_url"]}/{image}">\n') if image else ""
     return f"""<!DOCTYPE html><html lang="en"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -276,7 +357,7 @@ def head(title, desc):
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
 <meta property="og:type" content="website">
-<meta name="theme-color" content="{ACCENT}">
+{share}<meta name="theme-color" content="{ACCENT}">
 <link rel="icon" type="image/jpeg" href="{LOGO_PATH}">
 <link rel="apple-touch-icon" href="{LOGO_PATH}">
 <style>{css()}</style>
@@ -389,6 +470,32 @@ section.dark .eyebrow{{color:var(--accent)}}
 .ff-hero .ff-meta div{{background:rgba(0,0,0,.25);padding:14px 18px;border-radius:8px;backdrop-filter:blur(6px)}}
 .ff-hero .ff-meta strong{{display:block;font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:#cfd9ff;margin-bottom:4px}}
 
+/* Builder to Business */
+.b2b-hero{{background:var(--ink);color:#fff;padding:80px 0;border-bottom:4px solid var(--accent)}}
+.b2b-hero h1{{color:#fff;font-size:clamp(2.2rem,6vw,3.8rem);line-height:1.04;margin-top:18px}}
+.b2b-hero .tag{{font-size:1.3rem;font-weight:600;color:#f3d7c2;margin-top:6px}}
+.b2b-chip{{display:inline-block;background:var(--accent);color:#fff;padding:6px 14px;font-weight:700;border-radius:4px;letter-spacing:.04em;font-size:.85rem;text-transform:uppercase}}
+.b2b-grid{{display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:center}}
+@media (max-width:860px){{.b2b-grid{{grid-template-columns:1fr}}}}
+.b2b-logo-card{{background:#F6F0E8;border-radius:16px;padding:26px}}
+.b2b-meta{{display:flex;flex-wrap:wrap;gap:14px;margin-top:26px}}
+.b2b-meta div{{background:#262626;border:1px solid #333;padding:14px 18px;border-radius:8px}}
+.b2b-meta strong{{display:block;font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin-bottom:4px}}
+.b2b-hero .btn-ghost{{border-color:#fff;color:#fff}}
+.b2b-hero .btn-ghost:hover{{background:#fff;color:var(--ink)}}
+.speaker{{display:flex;gap:18px;align-items:flex-start}}
+.speaker .face{{width:96px;height:96px;border-radius:50%;object-fit:cover;flex-shrink:0}}
+.speaker .initials{{width:96px;height:96px;border-radius:50%;flex-shrink:0;background:var(--accent-lite);color:var(--accent);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.7rem;letter-spacing:.02em}}
+.speaker .focus{{font-size:.78rem;font-weight:700;color:var(--teal);text-transform:uppercase;letter-spacing:.08em}}
+.speaker .talk{{font-weight:600;margin:.2em 0 .4em}}
+.day ul{{margin:10px 0 0;padding-left:18px;line-height:1.9;color:var(--muted)}}
+.faq details{{border-bottom:1px solid #eee;padding:16px 0}}
+.faq summary{{cursor:pointer;font-weight:700;font-size:1.02rem}}
+.faq details p{{margin:.6em 0 0;color:var(--muted)}}
+.partner-logo{{width:72px;height:72px;border-radius:12px;object-fit:cover;margin-bottom:14px;display:block}}
+.photo{{width:100%;border-radius:14px;display:block;object-fit:cover}}
+.caption{{font-size:.85rem;color:var(--muted);margin-top:8px}}
+
 /* Footer */
 footer{{background:var(--ink);color:#bdbdbd;padding:56px 0 32px}}
 footer h5{{color:#fff;text-transform:uppercase;font-size:.78rem;letter-spacing:.1em;margin-bottom:14px}}
@@ -429,7 +536,7 @@ def navbar(active=""):
     links = [
         ("about",            "About",            "About"),
         ("programmes",       "Programmes",       "Programmes"),
-        ("age-of-agents",    "Age of Agents",    "Age of Agents"),
+        ("builder-to-business", "Builder to Business", "Builder to Business"),
         ("frontier-fusion",  "Frontier Fusion",  "Frontier Fusion"),
         ("governance",       "Governance",       "Governance"),
         ("partners",         "Partners",         "Partners"),
@@ -446,6 +553,7 @@ def footer():
     nav_links = "".join([
         '<li><a href="about.html">About</a></li>',
         '<li><a href="programmes.html">Programmes</a></li>',
+        '<li><a href="builder-to-business.html">Builder to Business</a></li>',
         '<li><a href="age-of-agents.html">Age of Agents</a></li>',
         '<li><a href="frontier-fusion.html">Frontier Fusion</a></li>',
         '<li><a href="governance.html">Governance</a></li>',
@@ -458,7 +566,7 @@ def footer():
   <div>{thi_mark(64, inverted=True)}
     <h5 style="margin-top:14px">The Hiram Initiative</h5>
     <p>{ORG['tagline']}</p>
-    <p style="margin-top:14px">A community of young people in the United Kingdom who aren't waiting for opportunities, they're creating them.</p>
+    <p style="margin-top:14px">A community of {ORG['audience']} in the United Kingdom who aren't waiting for opportunities, they're creating them.</p>
     <p class="muted" style="font-size:.82rem;margin-top:14px">Registered office<br>{ORG['address']}</p>
   </div>
   <div>
@@ -475,6 +583,7 @@ def footer():
       <li><a href="mailto:{ORG['email']}">{ORG['email']}</a></li>
       <li><a href="tel:{ORG['phone'].replace(' ', '')}">{ORG['phone']}</a></li>
       <li><a href="{ORG['instagram_url']}" target="_blank" rel="noopener">Instagram {ORG['instagram']} ↗</a></li>
+      <li><a href="{ORG['x_url']}" target="_blank" rel="noopener">X {ORG['x']} ↗</a></li>
     </ul>
   </div>
 </div>
@@ -486,8 +595,10 @@ def footer():
 <script>document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',()=>document.getElementById('nl').classList.remove('open')));</script>
 </body></html>"""
 
-def page(fname, title, desc, body, active=""):
-    out = head(title, desc) + "<body>" + navbar(active) + body + footer()
+def page(fname, title, desc, body, active="", image=None, extra_head=""):
+    out = head(title, desc, image) + "<body>" + navbar(active) + body + footer()
+    if extra_head:
+        out = out.replace("</head>", extra_head + "\n</head>", 1)
     # canonical
     slug = fname[:-5]
     canon = f"https://{ORG['website']}/" + ("" if slug == "index" else slug)
@@ -499,7 +610,7 @@ def page(fname, title, desc, body, active=""):
     out = re.sub(r'href="index\.html(#[^"]*)?"',
                  lambda m: f'href="/{m.group(1) or ""}"', out)
     out = re.sub(r'href="([a-z0-9][a-z0-9-]*)\.html(#[^"]*)?"', r'href="\1\2"', out)
-    with open(os.path.join(SITE, fname), "w") as f:
+    with open(os.path.join(SITE, fname), "w", encoding="utf-8") as f:
         f.write(out)
 
 # ---------------------------------------------------------------------------
@@ -516,16 +627,19 @@ def home():
         f'<div class="bullet"><div class="b-num">{i+1:02d}</div><div class="b-body"><h4>{t}</h4><p>{p}</p></div></div>'
         for i, (t, p) in enumerate(PROGRAMMES)
     )
+    stats = "".join(f'<div class="stat"><div class="big">{n}</div><div class="lbl">{l}</div></div>' for n, l in STATS)
+    speakers = ", ".join(sp[0] for sp in B2B["speakers"][:-1]) + " and " + B2B["speakers"][-1][0]
     body = f"""
 <section class="hero"><div class="wrap">
 <span class="eyebrow orange">{ORG['tagline']}</span>
 <h1>A generation that is not waiting for opportunities.<br><em>They are creating them.</em></h1>
 <p class="thesis">{ORG['thesis']}</p>
-<p class="lead">The Hiram Initiative exists to bridge the gap between traditional education and the rapidly evolving demands of the modern world, through hands-on education in IT, AI, blockchain, content creation and entrepreneurship, direct access to industry professionals, and a community built around shared purpose.</p>
+<p class="lead">The Hiram Initiative exists to bridge the gap between traditional education and the rapidly evolving demands of the modern world, through practical education in IT, AI, blockchain, content creation and entrepreneurship, direct access to industry professionals, and a community built around shared purpose.</p>
 <div class="cta">
   <a class="btn btn-primary" href="programmes.html">See the programmes →</a>
-  <a class="btn btn-ghost" href="age-of-agents.html">Age of Agents · 9–11 Jul ↗</a>
+  <a class="btn btn-ghost" href="builder-to-business.html">Builder to Business · 20 &amp; 21 Nov ↗</a>
 </div>
+<div class="stats">{stats}</div>
 </div></section>
 
 <section class="band"><div class="wrap">
@@ -536,24 +650,29 @@ def home():
 
 <section><div class="wrap">
 <div class="sec-head"><span class="eyebrow">Programmes</span><h2>How we deliver</h2>
-<p class="lead">Five running programmes, each grounded in practice, led by people who have done the thing they teach.</p></div>
+<p class="lead">Six running programmes, each grounded in practice, led by people who have done the thing they teach.</p></div>
 {programmes_rows}
 <div class="cta"><a class="btn btn-primary" href="programmes.html">The 2026 roadmap →</a></div>
 </div></section>
 
-<section class="ff-hero"><div class="wrap">
-<span class="ff-chip">Next up · #savethedate</span>
-<h1 style="margin-top:18px">{AOA['title']} <span style="display:block;font-size:.5em;font-weight:600;opacity:.9">{AOA['subtitle']}</span></h1>
-<p style="font-size:1.15rem;max-width:60ch;margin-top:18px;color:#dde7ff">{AOA['blurb']}</p>
-<div class="ff-meta">
-  <div><strong>When</strong>{AOA['date']}</div>
-  <div><strong>Where</strong>{AOA['venue']}</div>
-  <div><strong>Led by</strong>{AOA['led_by']}</div>
+<section class="b2b-hero"><div class="wrap b2b-grid">
+<div>
+<span class="b2b-chip">Next up · The Final Piece</span>
+<h1>Builder to Business</h1>
+<p class="tag">The final chapter of the B2B series.</p>
+<p style="font-size:1.1rem;max-width:60ch;margin-top:16px;color:#e6e6e6">{B2B['short']}</p>
+<div class="b2b-meta">
+  <div><strong>When</strong>{B2B['when']}</div>
+  <div><strong>Where</strong>{B2B['where']}</div>
+  <div><strong>Speakers</strong>{speakers}</div>
 </div>
+<p style="margin-top:18px;color:#f3d7c2;font-weight:600">Free entry. Registration required.</p>
 <div class="cta">
-  <a class="btn btn-ff" style="background:{FF_YELLOW};color:{INK}" href="age-of-agents.html">Event details →</a>
-  <a class="btn btn-ghost" style="border-color:#fff;color:#fff" href="{ORG['instagram_url']}" target="_blank" rel="noopener">Register via Instagram ↗</a>
+  <a class="btn btn-ghost" href="builder-to-business.html">Event details →</a>
+  <a class="btn btn-primary" href="{ORG['register_url']}" target="_blank" rel="noopener">Register now ↗</a>
 </div>
+</div>
+<div class="b2b-logo-card"><img src="assets/b2b-logo.png" alt="Builder to Business: The Final Piece" style="width:100%"></div>
 </div></section>
 
 <section><div class="wrap">
@@ -595,12 +714,12 @@ def about():
 
 <section><div class="wrap">
 <div class="sec-head"><span class="eyebrow">Mission</span><h2>What we do</h2></div>
-<p class="lead">The Hiram Initiative exists to close the gap between where young people are and where they are capable of going. We do this by focusing on the skills, mindset and networks that define success in the modern world, delivered through hands-on education, direct access to industry professionals, and a community built around shared purpose.</p>
+<p class="lead">The Hiram Initiative exists to close the gap between where young people are and where they are capable of going. We do this by focusing on the skills, mindset and networks that define success in the modern world, delivered through practical education, direct access to industry professionals, and a community built around shared purpose.</p>
 </div></section>
 
 <section class="band"><div class="wrap">
 <div class="sec-head"><span class="eyebrow">Vision</span><h2>The community we are building</h2></div>
-<p class="lead">A generation of young people in the United Kingdom who are not waiting for opportunities. They are creating them. A community where every member grows, contributes and leads with purpose.</p>
+<p class="lead">A generation of {ORG['audience']} in the United Kingdom who are not waiting for opportunities. They are creating them. A community where every member grows, contributes and leads with purpose.</p>
 </div></section>
 
 <section><div class="wrap">
@@ -616,15 +735,20 @@ def about():
 <div class="cta"><a class="btn btn-primary" href="programmes.html">See the five pillars →</a></div>
 </div></section>
 
+<section class="band"><div class="wrap">
+<img class="photo" src="assets/community.jpg" alt="A Hiram Initiative session, with the THI banner beside the speakers" loading="lazy" style="max-height:440px">
+<p class="caption">A THI session. Around 250 active members meet in our WhatsApp community and at our events.</p>
+</div></section>
+
 <section><div class="wrap">
 <div class="sec-head"><span class="eyebrow">Who runs THI</span><h2>Current committee</h2>
-<p class="lead">A small founding committee responsible for the overall direction, oversight and operational management of the organisation, appointed for an initial three-year term in line with Section 4.4 of the constitution.</p></div>
+<p class="lead">A small founding committee responsible for the overall direction, oversight and operational management of the organisation, appointed for an initial three year term in line with Section 4.4 of the constitution.</p></div>
 <div class="grid g3">{com_cards}</div>
 <div style="margin-top:32px">
   <h3>Volunteers contributing to the work</h3>
   <ul style="margin-top:10px;line-height:1.9">{vol_lines}</ul>
 </div>
-<div class="note"><strong>How the committee operates.</strong> Anyone can apply to join the committee. Vacancies can be filled by co-option. Election or removal happens at a formally convened committee meeting. Members serve three-year terms and are eligible for re-election. A member may resign at any time, provided their resignation does not leave fewer than three members on the committee.</div>
+<div class="note"><strong>How the committee operates.</strong> Anyone can apply to join the committee. Vacancies can be filled by the committee appointing a new member. Election or removal happens at a formally convened committee meeting. Members serve three year terms and can stand for election again. A member may resign at any time, provided their resignation does not leave fewer than three members on the committee.</div>
 </div></section>
 """
     page("about.html", f"About, {ORG['name']}",
@@ -637,7 +761,7 @@ def programmes():
         f'<span class="icon-wrap">{icon(p["icon"])}</span>'
         f'<h3>{p["name"]}</h3>'
         f'<p class="muted">{p["tagline"]}</p>'
-        f'<span class="arrow">Deep-dive →</span></a>'
+        f'<span class="arrow">Explore →</span></a>'
         for p in PILLARS
     )
     prog_rows = "".join(
@@ -667,9 +791,19 @@ def programmes():
 </div></section>
 
 <section class="band"><div class="wrap">
-<div class="sec-head"><span class="eyebrow">How we deliver</span><h2>Five running programmes</h2>
-<p class="lead">Programmes are designed to be hands-on, practical and directly applicable to real-world situations.</p></div>
+<div class="sec-head"><span class="eyebrow">How we deliver</span><h2>Six running programmes</h2>
+<p class="lead">Programmes are designed to be practical and directly applicable to real situations.</p></div>
 {prog_rows}
+</div></section>
+
+<section><div class="wrap">
+<div class="sec-head"><span class="eyebrow">Events</span><h2>Upcoming and recent</h2>
+<p class="lead">The B2B series reaches its finale in November. Earlier in 2026, Age of Agents and Frontier Fusion filled the room.</p></div>
+<div class="grid g3">
+  <a class="pillar-tile" href="builder-to-business.html"><span class="num">Next up · 20 &amp; 21 Nov</span><h3>Builder to Business</h3><p class="muted">The Final Piece: a free two day accelerator in Tottenham.</p><span class="arrow">Event details →</span></a>
+  <a class="pillar-tile" href="age-of-agents.html"><span class="num">Completed · July 2026</span><h3>Age of Agents</h3><p class="muted">Three afternoons building AI agents. Sold out, with over 150 attendees.</p><span class="arrow">Recap →</span></a>
+  <a class="pillar-tile" href="frontier-fusion.html"><span class="num">Completed · May 2026</span><h3>Frontier Fusion</h3><p class="muted">AI, on chain and creator communities at Encode Hub, London.</p><span class="arrow">Recap →</span></a>
+</div>
 </div></section>
 
 <section><div class="wrap">
@@ -738,7 +872,7 @@ def frontier_fusion():
 <div class="ff-meta">
   <div><strong>When</strong>{FRONTIER['date']}, 6pm</div>
   <div><strong>Where</strong>{FRONTIER['venue']}</div>
-  <div><strong>Hosts</strong>THI, OnchainBrits and Superteam UK</div>
+  <div><strong>Hosts</strong>THI, OnChainBrits and Superteam UK</div>
 </div>
 <div class="cta">
   <a class="btn" style="background:{FF_YELLOW};color:{INK}" href="#gallery">See the photos ↓</a>
@@ -751,7 +885,7 @@ def frontier_fusion():
   <div style="flex:1;min-width:280px;max-width:460px">
     <span class="eyebrow">The invitation</span>
     <h2>The night, on one page</h2>
-    <p class="lead">The flier that drew the London frontier-tech community to Encode Hub for an evening of AI, on-chain and creator conversations.</p>
+    <p class="lead">The flier that drew the London frontier tech community to Encode Hub for an evening of AI, on chain and creator conversations.</p>
   </div>
 </div></section>
 
@@ -773,10 +907,10 @@ def frontier_fusion():
 
 <section><div class="wrap">
 <div class="sec-head"><span class="eyebrow">Who made it</span><h2>Hosts and collaborators</h2>
-<p class="lead">Co-hosted by The Hiram Initiative with the UK's most active on-chain communities.</p></div>
+<p class="lead">Hosted by The Hiram Initiative together with the UK's most active on chain communities.</p></div>
 <div class="grid g4">
-  <div class="card"><h3>The Hiram Initiative</h3><p>Host: the young-people-first community programme behind the event.</p></div>
-  <div class="card"><h3>OnchainBrits</h3><p>UK on-chain community partner: programming, network and reach.</p></div>
+  <div class="card"><h3>The Hiram Initiative</h3><p>Host: the community programme, built for young people, behind the event.</p></div>
+  <div class="card"><h3>OnChainBrits</h3><p>UK on chain community partner: programming, network and reach.</p></div>
   <div class="card"><h3>Superteam UK</h3><p>The Solana ecosystem in the UK, bringing builders, founders and operators.</p></div>
   <div class="card"><h3>Onchain Hub and Encode Club</h3><p>Venue and community collaborators, with support from Chewie and Ohjay.</p></div>
 </div>
@@ -784,57 +918,66 @@ def frontier_fusion():
 
 <section class="band"><div class="wrap" style="text-align:center">
 <div class="sec-head" style="margin:0 auto"><span class="eyebrow">The takeaway</span><h2>Still early. Just go build.</h2>
-<p class="lead" style="margin:0 auto">Attendees left energised, with a clear message: it is still early, and the moment to build is now. Frontier Fusion strengthened the London frontier-tech scene and built excitement ahead of Breakpoint 2026.</p></div>
-<div class="cta" style="justify-content:center"><a class="btn btn-primary" href="contact.html">Get involved →</a><a class="btn btn-ghost" href="age-of-agents.html">Age of Agents →</a></div>
+<p class="lead" style="margin:0 auto">Attendees left energised, with a clear message: it is still early, and the moment to build is now. Frontier Fusion strengthened the London frontier tech scene and built excitement ahead of Breakpoint 2026.</p></div>
+<div class="cta" style="justify-content:center"><a class="btn btn-primary" href="contact.html">Get involved →</a><a class="btn btn-ghost" href="builder-to-business.html">Builder to Business →</a></div>
 </div></section>
 """
-    page("frontier-fusion.html", f"Frontier Fusion 2026: AI &amp; On-Chain Innovation · {ORG['name']}",
+    page("frontier-fusion.html", f"Frontier Fusion 2026: AI &amp; On Chain Innovation · {ORG['name']}",
          "Frontier Fusion 2026 recap: THI's flagship night at Encode Hub, London, with OnchainBrits and Superteam UK. Solana, AI, content and Internet Capital Markets. 15 May 2026.",
          body, "frontier-fusion")
 
 def age_of_agents():
     body = f"""
+<section style="padding:20px 0;background:var(--accent-lite);border-bottom:1px solid #f0d2bb"><div class="wrap">
+<p style="margin:0"><strong>Completed · July 2026.</strong> Thank you to everyone who built with us. Next up is Builder to Business: The Final Piece on 20 &amp; 21 November. <a href="builder-to-business.html" style="color:var(--accent-dark);font-weight:700">See the event →</a></p>
+</div></section>
+
 <section class="ff-hero"><div class="wrap">
-<span class="ff-chip">9-11 July 2026 · 2-6pm</span>
+<span class="ff-chip">Completed · 9 to 11 July 2026 · 2pm to 6pm</span>
 <h1 style="margin-top:18px">Age of<br>Agents</h1>
-<p style="font-size:1.6rem;margin-top:8px;font-weight:600;color:#dde7ff">An introduction into the creation of AI Agents.</p>
-<p style="font-size:1.1rem;max-width:64ch;margin-top:24px;color:#e7edff">THI's hands-on introduction to building AI agents: software that decides and acts on your behalf. Three afternoons that take you from what an agent is to creating your own, so you meet the shift as a builder, not a spectator.</p>
+<p style="font-size:1.6rem;margin-top:8px;font-weight:600;color:#dde7ff">{AOA['subtitle']}</p>
+<p style="font-size:1.1rem;max-width:64ch;margin-top:24px;color:#e7edff">{AOA['blurb']}</p>
 <div class="ff-meta">
-  <div><strong>When</strong>9th to 11th July 2026, 2pm to 6pm</div>
-  <div><strong>Where</strong>454A Highroad, Bruce Grove, London N17 9JD</div>
-  <div><strong>Led by</strong>Joseph Falano (Ohjay), with Jalaaldeen Akinola (JRD)</div>
+  <div><strong>When</strong>{AOA['date']}</div>
+  <div><strong>Where</strong>{AOA['venue']}</div>
+  <div><strong>Led by</strong>{AOA['led_by']}</div>
 </div>
 <div class="cta">
-  <a class="btn" style="background:{FF_YELLOW};color:{INK}" href="{ORG['instagram_url']}" target="_blank" rel="noopener">Register (scan the flier QR) ↗</a>
+  <a class="btn" style="background:{FF_YELLOW};color:{INK}" href="builder-to-business.html">See Builder to Business →</a>
   <a class="btn btn-ghost" style="border-color:#fff;color:#fff" href="programmes.html">All programmes →</a>
 </div>
 </div></section>
 
-<section><div class="wrap" style="text-align:center">
-<div class="sec-head" style="margin:0 auto"><span class="eyebrow">The event</span><h2>Age of the Agents</h2>
-<p class="lead" style="margin:0 auto 10px">Scan the QR on the flier to register. Places are limited.</p></div>
-<img src="assets/aoa-flier.jpg" alt="Age of the Agents: an introduction into the creation of AI Agents. 9th to 11th July 2026, 2pm to 6pm, 454A Highroad, Bruce Grove, London N17 9JD. Host Joseph Falano (Ohjay), facilitator Jalaaldeen Akinola (JRD)." loading="lazy" style="width:100%;max-width:760px;border-radius:16px;box-shadow:0 14px 46px rgba(0,0,0,.22)">
+<section><div class="wrap">
+<div class="sec-head"><span class="eyebrow">The recap</span><h2>Sold out, three days running</h2>
+<p class="lead">Over 150 people across three days, an average of 40 a day, building AI agents in Tottenham.</p></div>
+<img class="photo" src="assets/aoa-group.jpg" alt="Age of Agents participants together in Tottenham, July 2026" loading="lazy">
+<p class="caption">Age of Agents, Tottenham, July 2026.</p>
 </div></section>
 
 <section class="band"><div class="wrap">
-<div class="sec-head"><span class="eyebrow">What you learn</span><h2>From first principles to your own agent</h2>
-<p class="lead">Four tracks across the three afternoons, taught hands-on by people building in the field.</p></div>
+<div class="sec-head"><span class="eyebrow">What we covered</span><h2>From first principles to your own agent</h2>
+<p class="lead">Four tracks across the three afternoons, taught by people building in the field.</p></div>
 <div class="grid g4">
   <div class="card"><div class="icon-wrap">{icon("lens")}</div><h3>Understand agents</h3><p>What an AI agent actually is, how it reasons and acts, and where it fits alongside the tools you already use.</p></div>
-  <div class="card"><div class="icon-wrap">{icon("spark")}</div><h3>Build your first agent</h3><p>Hands-on, from a prompt to a working agent that completes real tasks, with the craft of prompting and tools.</p></div>
+  <div class="card"><div class="icon-wrap">{icon("spark")}</div><h3>Build your first agent</h3><p>Practical, from a prompt to a working agent that completes real tasks, with the craft of prompting and tools.</p></div>
   <div class="card"><div class="icon-wrap">{icon("hands")}</div><h3>Own your agents</h3><p>Operating and owning agents with a mobile phone and an internet connection, no gatekeeper required.</p></div>
-  <div class="card"><div class="icon-wrap">{icon("chain")}</div><h3>Agents on-chain</h3><p>Where agents meet Solana, payments and Internet Capital Markets, and the new economics that opens up.</p></div>
+  <div class="card"><div class="icon-wrap">{icon("chain")}</div><h3>Agents on chain</h3><p>Where agents meet Solana, payments and Internet Capital Markets, and the new economics that opens up.</p></div>
 </div>
 </div></section>
 
-<section><div class="wrap">
-<div class="sec-head"><span class="eyebrow">Who it is for</span><h2>Built for beginners, useful to builders</h2>
-<p class="lead">No prior experience needed. We start from first principles and build up, so you leave with an agent you made and the confidence to keep going. Part of THI's mission to put the young people most exposed to technological change at the front of it.</p></div>
-<div class="cta"><a class="btn btn-primary" href="{ORG['instagram_url']}" target="_blank" rel="noopener">Register on Instagram →</a><a class="btn btn-ghost" href="contact.html">Ask a question →</a></div>
+<section><div class="wrap" style="display:flex;gap:36px;flex-wrap:wrap;align-items:center;justify-content:center">
+  <img src="assets/aoa-flier.jpg" alt="The Age of the Agents flier: an introduction into the creation of AI Agents, 9th to 11th July 2026, hosted by Joseph Falano (Ohjay) with facilitator Jalaaldeen Akinola (JRD)" loading="lazy" style="width:100%;max-width:360px;border-radius:16px;box-shadow:0 14px 46px rgba(0,0,0,.22)">
+  <div style="flex:1;min-width:280px;max-width:460px">
+    <span class="eyebrow">Who it was for</span>
+    <h2>Built for beginners, useful to builders</h2>
+    <p class="lead">No prior experience was needed. We started from first principles and built up, so everyone left with an agent they made and the confidence to keep going.</p>
+    <div class="cta"><a class="btn btn-primary" href="builder-to-business.html">Next: Builder to Business →</a><a class="btn btn-ghost" href="contact.html">Ask a question →</a></div>
+  </div>
 </div></section>
 """
     page("age-of-agents.html", f"Age of Agents: an introduction to creating AI agents · {ORG['name']}",
-         "Age of Agents, The Hiram Initiative's hands-on introduction to creating AI agents. 9th to 11th July 2026, 2pm to 6pm, 454A Highroad, Bruce Grove, London N17 9JD. Led by Joseph Falano (Ohjay) with Jalaaldeen Akinola (JRD).",
+         "Age of Agents, The Hiram Initiative's practical introduction to creating AI agents, 9 to 11 July 2026 at 454 High Road, Bruce Grove, London N17 9JD. Sold out, with over 150 attendees. Led by Joseph Falano (Ohjay) with Jalaaldeen Akinola (JRD).",
          body, "programmes")
 
 def governance():
@@ -869,11 +1012,11 @@ def governance():
 <p class="lead">The constitution is the source of truth for how THI is structured, governed and operated. It covers identity, aims, programmes, governance, powers, finances, partnerships, amendments and dissolution.</p></div>
 <div class="grid g2">
   <div class="card"><h3>Part One: Identity and Purpose</h3><p>Name, registered address, mission, vision, tagline, and the meaning of Hiram.</p></div>
-  <div class="card"><h3>Part Two: Aims and Objectives</h3><p>The core aim, strategic objectives across the five pillars, and the cross-cutting work on Life Intelligence and Community Access.</p></div>
+  <div class="card"><h3>Part Two: Aims and Objectives</h3><p>The core aim, strategic objectives across the five pillars, and the work on Life Intelligence and Community Access that runs across them.</p></div>
   <div class="card"><h3>Part Three: Programmes and Delivery</h3><p>Workshops, masterclasses, Expert Speaker Series, mentorship matching, networking events, and the 2026 roadmap.</p></div>
-  <div class="card"><h3>Part Four: Governance and Committee</h3><p>Committee structure, composition, current committee, and rules for membership, election, co-option and resignation.</p></div>
+  <div class="card"><h3>Part Four: Governance and Committee</h3><p>Committee structure, composition, current committee, and rules for membership, election, appointment by the committee and resignation.</p></div>
   <div class="card"><h3>Part Five: Powers of the Committee</h3><p>What the committee may do in furtherance of the aims, raise funds, hold an account, run programmes, partner, employ, consult.</p></div>
-  <div class="card"><h3>Part Six: Finances and Funds</h3><p>Two-signatory rule, no personal benefit, accurate records, and how funds are used across resources, events, mentors and outreach.</p></div>
+  <div class="card"><h3>Part Six: Finances and Funds</h3><p>Two signatory rule, no personal benefit, accurate records, and how funds are used across resources, events, mentors and outreach.</p></div>
   <div class="card"><h3>Part Seven: Partnerships and Collaboration</h3><p>Partnership principles, benefits to partners, and alignment with future workforce needs.</p></div>
   <div class="card"><h3>Part Eight: Amendments and Dissolution</h3><p>Any change requires a 75% vote at a formally convened meeting; on dissolution, assets pass to a body with similar aims.</p></div>
 </div>
@@ -890,7 +1033,8 @@ def partners():
         for i, (t, d) in enumerate(PARTNERS_BENEFITS)
     )
     confirmed = "".join(
-        f'<div class="card"><h3>{n}</h3><p>{d}</p></div>' for n, d in PARTNERS_CONFIRMED
+        f'<div class="card"><img class="partner-logo" src="{logo}" alt="{n} logo" loading="lazy"><h3>{n}</h3><p>{d}</p></div>'
+        for n, d, logo in PARTNERS_CONFIRMED
     )
     body = f"""
 <section class="hero"><div class="wrap">
@@ -904,14 +1048,19 @@ def partners():
 </div></section>
 
 <section><div class="wrap">
+<img class="photo" src="assets/team.jpg" alt="Members of The Hiram Initiative community at an event" loading="lazy" style="max-height:460px">
+<p class="caption">The Hiram Initiative community.</p>
+</div></section>
+
+<section><div class="wrap">
 <div class="sec-head"><span class="eyebrow">What partners receive</span><h2>Benefits, stated honestly</h2>
 <p class="lead">From the constitution, Part Seven, the practical benefits of supporting THI's work.</p></div>
 {benefits}
 </div></section>
 
 <section class="band"><div class="wrap">
-<div class="sec-head"><span class="eyebrow">Already with us</span><h2>Frontier Fusion 2026 partners</h2>
-<p class="lead">Our first wave of confirmed partners and supporters for the 2026 programme.</p></div>
+<div class="sec-head"><span class="eyebrow">Already with us</span><h2>Partners and collaborators</h2>
+<p class="lead">The organisations that have hosted, housed and backed our 2026 events.</p></div>
 <div class="grid g4">{confirmed}</div>
 </div></section>
 
@@ -922,7 +1071,7 @@ def partners():
 </div></section>
 """
     page("partners.html", f"Partners, {ORG['name']}",
-         "Partner with The Hiram Initiative: brand recognition, community access, talent pipeline and impact reporting, alongside On Chain Brits, Superteam UK and other 2026 partners.",
+         "Partner with The Hiram Initiative: brand recognition, community access, talent pipeline and impact reporting, alongside OnChainBrits, Superteam UK, Encode Club and Gosen Inc.",
          body, "partners")
 
 def contact():
@@ -938,7 +1087,7 @@ def contact():
   <div class="card">
     <div class="icon-wrap">{icon("rocket")}</div>
     <h3>Join the community</h3>
-    <p>You're a young person in the UK, ready to invest in your IT, AI, blockchain, content or entrepreneurship skills. We're onboarding cohorts now.</p>
+    <p>You're a young person aged 18 to 35 in the UK, ready to invest in your IT, AI, blockchain, content or entrepreneurship skills. We're onboarding cohorts now.</p>
     <p style="margin-top:14px"><a class="btn btn-primary" href="mailto:{ORG['email']}?subject=Joining%20THI" style="padding:10px 18px;font-size:.9rem">Email to join →</a></p>
   </div>
   <div class="card">
@@ -958,7 +1107,7 @@ def contact():
 
 <section class="band"><div class="wrap">
 <div class="sec-head"><span class="eyebrow">Direct lines</span><h2>Reach us</h2></div>
-<div class="grid g3">
+<div class="grid g4">
   <div class="card">
     <h3>Email</h3>
     <p><a href="mailto:{ORG['email']}">{ORG['email']}</a></p>
@@ -972,15 +1121,132 @@ def contact():
   <div class="card">
     <h3>Instagram</h3>
     <p><a href="{ORG['instagram_url']}" target="_blank" rel="noopener">{ORG['instagram']} ↗</a></p>
-    <p class="muted">Event announcements, member highlights, and Frontier Fusion RSVPs.</p>
+    <p class="muted">Event announcements and member highlights. Registration for each event is on its page.</p>
+  </div>
+  <div class="card">
+    <h3>X</h3>
+    <p><a href="{ORG['x_url']}" target="_blank" rel="noopener">{ORG['x']} ↗</a></p>
+    <p class="muted">News, threads and updates from the community.</p>
   </div>
 </div>
 <div class="note" style="margin-top:32px"><strong>Registered office.</strong> {ORG['address']}. Visits by appointment, please email ahead.</div>
 </div></section>
 """
     page("contact.html", f"Contact, {ORG['name']}",
-         "Join, mentor, partner, or reach The Hiram Initiative directly. Email, phone, Instagram and registered office in Tottenham, London.",
+         "Join, mentor, partner, or reach The Hiram Initiative directly. Email, phone, Instagram, X and registered office in Tottenham, London.",
          body, "")
+
+def builder_to_business():
+    def face(name, img):
+        if img:
+            return f'<img class="face" src="{img}" alt="{name}" loading="lazy">'
+        return f'<span class="initials" aria-hidden="true">{"".join(w[0] for w in name.split()[:2])}</span>'
+    speakers = "".join(
+        f'<div class="card speaker">{face(n, img)}<div><span class="focus">{focus}</span><h3 style="margin:.2em 0 .1em">{n}</h3>'
+        f'<p class="talk">{talk}</p><p>{bio}</p></div></div>'
+        for n, focus, talk, bio, img in B2B["speakers"]
+    )
+    learn = "".join(
+        f'<div class="card"><div class="icon-wrap">{icon(ic)}</div><h3>{t}</h3><p>{d}</p></div>' for t, d, ic in B2B["learn"]
+    )
+    days = "".join(
+        f'<div class="card day"><span class="num">{d}</span><h3>{focus}</h3><ul>' + "".join(f"<li>{x}</li>" for x in items) + "</ul></div>"
+        for d, focus, items in B2B["days"]
+    )
+    shows = "".join(f'<div class="card"><h3>{n}</h3><p>{who}</p></div>' for n, who in B2B["showcases"])
+    faq = "".join(f"<details><summary>{q}</summary><p>{a}</p></details>" for q, a in B2B["faq"])
+    series = "".join(
+        f'<div class="tl"><span class="q">{k}</span><h3 style="margin:.2em 0 .3em">{t}</h3><p>{d}</p></div>' for k, t, d in B2B["series"]
+    )
+    about = "".join(f'<p class="lead">{x}</p>' for x in B2B["about"])
+    reg = ORG["register_url"]
+    body = f"""
+<section class="b2b-hero"><div class="wrap b2b-grid">
+<div>
+<span class="b2b-chip">{B2B['chip']}</span>
+<h1>{B2B['title']}</h1>
+<p class="tag">{B2B['tagline']}</p>
+<div class="b2b-meta">
+  <div><strong>When</strong>{B2B['when']}</div>
+  <div><strong>Where</strong>{B2B['where']}</div>
+  <div><strong>Entry</strong>{B2B['entry']}</div>
+</div>
+<div class="cta">
+  <a class="btn btn-primary" href="{reg}" target="_blank" rel="noopener">Register now ↗</a>
+  <a class="btn btn-ghost" href="contact.html">Ask a question →</a>
+</div>
+</div>
+<div class="b2b-logo-card"><img src="assets/b2b-logo.png" alt="From Builder to Business" style="width:100%"></div>
+</div></section>
+
+<section><div class="wrap">
+<div class="sec-head"><span class="eyebrow">About the event</span><h2>The final chapter of the B2B series</h2></div>
+{about}
+</div></section>
+
+<section class="band"><div class="wrap">
+<div class="sec-head"><span class="eyebrow">What you will learn</span><h2>Two days, five tracks</h2></div>
+<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr))">{learn}</div>
+</div></section>
+
+<section><div class="wrap">
+<div class="sec-head"><span class="eyebrow">Who it is for</span><h2>Builders ready to become business owners</h2>
+<p class="lead">{B2B['for']}</p></div>
+<div class="cta"><a class="btn btn-primary" href="{reg}" target="_blank" rel="noopener">Register now ↗</a></div>
+</div></section>
+
+<section class="band"><div class="wrap">
+<div class="sec-head"><span class="eyebrow">Speakers</span><h2>Who you will learn from</h2></div>
+<div class="grid g2">{speakers}</div>
+</div></section>
+
+<section><div class="wrap">
+<div class="sec-head"><span class="eyebrow">Programme highlights</span><h2>Two days, two focus areas</h2>
+<p class="lead">Times to be confirmed. Doors from 10am on both days.</p></div>
+<div class="grid g2">{days}</div>
+</div></section>
+
+<section class="band"><div class="wrap">
+<div class="sec-head"><span class="eyebrow">Product showcases</span><h2>Real products, built by real builders</h2>
+<p class="lead">Meet the founders behind them.</p></div>
+<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr))">{shows}</div>
+<div class="note" style="margin-top:28px"><strong>Special guest.</strong> {B2B['guest'][0]}, {B2B['guest'][1]}</div>
+</div></section>
+
+<section><div class="wrap">
+<div class="sec-head"><span class="eyebrow">The B2B series</span><h2>The series so far</h2></div>
+<div class="timeline">{series}</div>
+</div></section>
+
+<section class="band"><div class="wrap faq">
+<div class="sec-head"><span class="eyebrow">Questions</span><h2>Frequently asked</h2></div>
+{faq}
+</div></section>
+
+<section class="b2b-hero" style="text-align:center"><div class="wrap">
+<h2 style="color:#fff">Secure your spot. Let's take you from builder to business.</h2>
+<div class="cta" style="justify-content:center"><a class="btn btn-primary" href="{reg}" target="_blank" rel="noopener">Register now ↗</a></div>
+</div></section>
+"""
+    # schema.org Event: start and end dates only (end times are not yet confirmed)
+    import json
+    ld = {
+        "@context": "https://schema.org", "@type": "Event", "name": re.sub("<.*?>", "", B2B["title"]),
+        "description": re.sub("&amp;", "&", B2B["page_desc"]),
+        "startDate": "2026-11-20T10:00:00+00:00", "endDate": "2026-11-21",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "location": {"@type": "Place", "name": "454 High Road, Bruce Grove",
+                     "address": {"@type": "PostalAddress", "streetAddress": "454 High Road, Bruce Grove, Tottenham",
+                                 "addressLocality": "London", "addressCountry": "GB"}},
+        "image": [f"{ORG['base_url']}/{B2B['share']}"],
+        "organizer": {"@type": "Organization", "name": ORG["name"], "url": ORG["base_url"]},
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "GBP", "url": reg, "availability": "https://schema.org/InStock"},
+        "performer": [{"@type": "Person", "name": sp[0]} for sp in B2B["speakers"]],
+    }
+    extra = '<script type="application/ld+json">' + json.dumps(ld, ensure_ascii=False) + "</script>"
+    page("builder-to-business.html", B2B["page_title"], B2B["page_desc"], body, "builder-to-business",
+         image=B2B["share"], extra_head=extra)
 
 def constitution_page():
     body = f"""
@@ -1009,7 +1275,7 @@ def constitution_page():
 <section class="band"><div class="wrap">
 <div class="sec-head"><span class="eyebrow">Adoption</span><h2>Signed and dated</h2></div>
 <div class="grid g2">
-  <div class="card"><h3>Chairperson</h3><p><strong>Johnson Ogundeji</strong></p><p class="muted">Signed {ORG['adopted']}</p></div>
+  <div class="card"><h3>Chairperson</h3><p><strong>Johnson Ogúndèjì</strong></p><p class="muted">Signed {ORG['adopted']}</p></div>
   <div class="card"><h3>Secretary</h3><p><strong>Joseph Falano</strong></p><p class="muted">Signed {ORG['adopted']}</p></div>
 </div>
 <div class="note"><strong>Amendments.</strong> Alterations may only be made at a formally convened meeting with at least 75% of those present and voting in favour. Proposed amendments must be submitted in writing to the Secretary at least 14 days before the meeting.</div>
@@ -1026,6 +1292,7 @@ def build():
     home()
     about()
     programmes()
+    builder_to_business()
     for p in PILLARS: pillar_page(p)
     frontier_fusion()
     age_of_agents()

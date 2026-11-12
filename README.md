@@ -13,6 +13,7 @@ via GitHub Pages).
 
 | Path | What it is |
 |---|---|
+| `assets/check_site.py` | Checks the built site against the Builder to Business brief: no hyphens or dashes in the copy, no "454A", every Register button to Luma, every link and image resolving, the menu, the event page's title, description and share image. `python3 assets/check_site.py` prints SITE-CHECK-PASS. |
 | `assets/build_site.py` | Single-file Python generator. No dependencies. Reads the content baked into the script (sourced directly from the constitution, AGM minutes and Frontier Fusion poster) and writes static HTML to `website/`. |
 | `website/` | The built site. This is what GitHub Pages serves. Regenerate any time with `python3 assets/build_site.py`. |
 | `website/CNAME` | Custom-domain pointer for GitHub Pages. |
@@ -20,11 +21,13 @@ via GitHub Pages).
 
 ## Source documents
 
-The site's content is drawn faithfully from three documents:
+The site's content is drawn faithfully from these documents:
 
 - **THI Constitution** — adopted 13 May 2026, signed by the Chairperson and Secretary.
 - **AGM (Initiation Meeting) Minutes** — 13 April 2026, signed by Chair, Secretary and Treasurer.
 - **Frontier Fusion 2026 poster** — flagship event, 15 May 2026, Encode Hub London.
+- **Builder to Business website update brief** — 6 November 2026: the event page, the home page block, the menu, registration on Luma, the copy fixes.
+- **THI funding pitch** — October 2026: three speaker portraits, the partner logos, event and community photos, the B2B series so far.
 
 The signed originals are held by the committee and are available on
 request to <admin@hiraminitiative.com>.
@@ -40,6 +43,8 @@ request to <admin@hiraminitiative.com>.
 /pillar-blockchain      Blockchain Technology
 /pillar-content         Content Creation
 /pillar-entrepreneurship  Entrepreneurship & Business
+/builder-to-business    Builder to Business: The Final Piece, 20 & 21 November 2026
+/age-of-agents          Age of Agents, July 2026 (completed)
 /frontier-fusion        Frontier Fusion 2026 — AI & On-Chain Innovation
 /governance             Committee, financial governance, the constitution
 /constitution           Constitution summary, contents and adoption
