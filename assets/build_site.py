@@ -194,8 +194,8 @@ PARTNERS_BENEFITS = [
 # EdenFi joins this list only once the partnership is signed and announced (the brief); the heading then becomes
 # "Our partners".
 PARTNERS_CONFIRMED = [
-    ("OnChainBrits",  "Frontier Fusion cohost.",                    "assets/partner-onchainbrits.png"),
-    ("Superteam UK",  "Frontier Fusion cohost.",                    "assets/partner-superteam-uk.png"),
+    ("OnChainBrits",  "Frontier Fusion co host.",                    "assets/partner-onchainbrits.png"),
+    ("Superteam UK",  "Frontier Fusion co host.",                    "assets/partner-superteam-uk.png"),
     ("Encode Club",   "Venue and community collaborator.",          "assets/partner-encode-club.png"),
     ("Gosen Inc.",    "Supporter.",                                 "assets/partner-gosen.png"),
 ]
@@ -219,9 +219,9 @@ AOA = {
     "blurb":    "THI's practical introduction to building AI agents: software that decides and acts on your behalf. Three afternoons that take you from what an agent is to creating your own, so you meet the shift as a builder, not a spectator.",
 }
 
-# Builder to Business: The Final Piece. Copy from the Builder to Business website update brief (6 Nov 2026);
-# speaker portraits for three of the five from THI's pitch (Oct 2026); the other two show initials until the asset
-# pack's headshots arrive.
+# Builder to Business: The Final Piece. Copy from the Builder to Business website update brief (6 Nov 2026) and its
+# asset pack (THI_B2B_Website_Assets.zip): the flyer, the five headshots and speaker cards, the guest's invite, the
+# Beginner to Business poster, the share image and the promo video (converted to 540 x 960 H.264 for the web).
 B2B = {
     "title":    "Builder to Business: The Final Piece",
     "chip":     "20 &amp; 21 November 2026 · From 10am · Tottenham",
@@ -238,7 +238,7 @@ B2B = {
         ("Startup Architecture",     "Structure and operationalise your startup to last.", "ledger"),
         ("Funding and Sponsorships", "Position yourself to source, pitch and secure funding and partnerships.", "globe"),
         ("Content as Currency",      "Use content and digital storytelling to market your product, build authority and attract loyal clients.", "lens"),
-        ("Live Workshops",           "Practical sessions in business model generation and video editing.", "hands"),
+        ("Live Workshops",           "Hands on sessions in business model generation and video editing.", "hands"),
         ("Product Showcases",        "See real products built by real builders, and meet the founders behind them.", "rocket"),
     ],
     "for":      "Young people aged 18 to 35, builders, creators and early stage founders ready to turn skills and ideas into a working business. Whether you are scaling a service, launching a product or positioning your brand for investment, this is your toolkit, your network and your roadmap. Completed Beginner to Builder? This is your next step.",
@@ -250,9 +250,9 @@ B2B = {
         ("Maryann Enereba", "Content as Currency", "Content as Currency: Digital Storytelling That Builds Brands",
          "Digital storyteller, professional photographer and founder of Telling Reel Stories. CNN Academy trained fellow.", "assets/speaker-maryann-enereba.jpg"),
         ("Sodiq Davies", "Startup Architecture", "Shipping Faster with AI: Delivery Habits That Turn Ideas into Products",
-         "Delivery leader with 9+ years in technology delivery, leading a portfolio of around £3M at Jaguar Land Rover, with a focus on AI augmented delivery.", None),
+         "Delivery leader with 9+ years in technology delivery, leading a portfolio of around £3M at Jaguar Land Rover, with a focus on AI augmented delivery.", "assets/speaker-sodiq-davies.jpg"),
         ("Nathan Vandy", "Startup Architecture and Funding", "Building a Company Investors Trust: Lessons on Structure, Funding and Partnerships",
-         "Cofounder and CEO of bond.credit. Previously led the DAO at DappRadar and was Managing Director of the TrueFi Foundation.", None),
+         "Cofounder and CEO of bond.credit. Previously led the DAO at DappRadar and was Managing Director of the TrueFi Foundation.", "assets/speaker-nathan-vandy.jpg"),
     ],
     "days": [
         ("Day 1 · Friday 20 November", "Startup Architecture",
@@ -279,7 +279,25 @@ B2B = {
     "page_title": "Builder to Business: The Final Piece · The Hiram Initiative",
     "page_desc":  "A free two day accelerator in London, 20 &amp; 21 November 2026, turning young builders into business owners. Register now.",
     "share":      "assets/b2b-share.jpg",
+    "flyer":      "assets/b2b-flyer.jpg",
+    "flyer_alt":  "The official Builder to Business flyer: The Final Piece, 20 and 21 November 2026, from 10am, 454 High Road, Bruce Grove, Tottenham, London",
+    "video":      "assets/b2b-promo.mp4",
+    "poster":     "assets/b2b-promo-poster.jpg",
+    "caption":    "Every business starts out as an idea. Join us for Builder to Business: The Final Piece.",
+    "guest_img":  "assets/b2b-guest-mary-mccauley.jpg",
+    "series_img": "assets/b2b-beginner-to-business.jpg",
+    "cards": ["mark-physsas", "jay-chen", "maryann-enereba", "sodiq-davies", "nathan-vandy"],
 }
+
+def promo_video():
+    """The 34 second promo (vertical, captions burned in). Fetched only when played."""
+    return (f'<video controls playsinline preload="none" poster="{B2B["poster"]}" '
+            f'style="width:100%;max-width:360px;aspect-ratio:9/16;border-radius:16px;background:#F6F0E8;display:block;margin:0 auto">'
+            f'<source src="{B2B["video"]}" type="video/mp4">Your browser cannot play this video.</video>')
+
+def flyer(max_w=440):
+    return (f'<img src="{B2B["flyer"]}" alt="{B2B["flyer_alt"]}" style="width:100%;max-width:{max_w}px;border-radius:16px;'
+            f'box-shadow:0 14px 46px rgba(0,0,0,.35);display:block;margin:0 auto">')
 
 # Community in numbers (brief p.06, site wide details)
 STATS = [
@@ -672,7 +690,13 @@ def home():
   <a class="btn btn-primary" href="{ORG['register_url']}" target="_blank" rel="noopener">Register now ↗</a>
 </div>
 </div>
-<div class="b2b-logo-card"><img src="assets/b2b-logo.png" alt="Builder to Business: The Final Piece" style="width:100%"></div>
+<div>{flyer(400)}</div>
+</div></section>
+
+<section class="band"><div class="wrap" style="text-align:center">
+<div class="sec-head" style="margin:0 auto 24px"><span class="eyebrow">Watch</span><h2>From an idea to a business</h2></div>
+{promo_video()}
+<p class="caption" style="max-width:46ch;margin:12px auto 0">{B2B['caption']}</p>
 </div></section>
 
 <section><div class="wrap">
@@ -1155,6 +1179,12 @@ def builder_to_business():
     )
     shows = "".join(f'<div class="card"><h3>{n}</h3><p>{who}</p></div>' for n, who in B2B["showcases"])
     faq = "".join(f"<details><summary>{q}</summary><p>{a}</p></details>" for q, a in B2B["faq"])
+    names = {sp[4]: sp[0] for sp in B2B["speakers"]}
+    cards = "".join(
+        f'<a href="assets/speaker-card-{c}.jpg" target="_blank" rel="noopener"><img class="photo" src="assets/speaker-card-{c}.jpg" '
+        f'alt="Speaker card: {names[f"assets/speaker-{c}.jpg"]}" loading="lazy"></a>'
+        for c in B2B["cards"]
+    )
     series = "".join(
         f'<div class="tl"><span class="q">{k}</span><h3 style="margin:.2em 0 .3em">{t}</h3><p>{d}</p></div>' for k, t, d in B2B["series"]
     )
@@ -1176,12 +1206,15 @@ def builder_to_business():
   <a class="btn btn-ghost" href="contact.html">Ask a question →</a>
 </div>
 </div>
-<div class="b2b-logo-card"><img src="assets/b2b-logo.png" alt="From Builder to Business" style="width:100%"></div>
+<div>{flyer(440)}</div>
 </div></section>
 
-<section><div class="wrap">
+<section><div class="wrap b2b-grid" style="align-items:start">
+<div>
 <div class="sec-head"><span class="eyebrow">About the event</span><h2>The final chapter of the B2B series</h2></div>
 {about}
+</div>
+<div>{promo_video()}<p class="caption" style="text-align:center">{B2B['caption']}</p></div>
 </div></section>
 
 <section class="band"><div class="wrap">
@@ -1198,6 +1231,8 @@ def builder_to_business():
 <section class="band"><div class="wrap">
 <div class="sec-head"><span class="eyebrow">Speakers</span><h2>Who you will learn from</h2></div>
 <div class="grid g2">{speakers}</div>
+<h3 style="margin-top:36px">Meet our speakers</h3>
+<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(170px,1fr));margin-top:14px">{cards}</div>
 </div></section>
 
 <section><div class="wrap">
@@ -1210,12 +1245,17 @@ def builder_to_business():
 <div class="sec-head"><span class="eyebrow">Product showcases</span><h2>Real products, built by real builders</h2>
 <p class="lead">Meet the founders behind them.</p></div>
 <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr))">{shows}</div>
-<div class="note" style="margin-top:28px"><strong>Special guest.</strong> {B2B['guest'][0]}, {B2B['guest'][1]}</div>
+<div class="grid g2" style="margin-top:32px;align-items:center">
+  <img src="{B2B['guest_img']}" alt="{B2B['guest'][0]} invites you to Builder to Business: The Final Piece" loading="lazy" style="width:100%;max-width:360px;border-radius:16px;box-shadow:0 14px 46px rgba(0,0,0,.2);margin:0 auto">
+  <div><span class="eyebrow orange">Special guest</span><h3 style="font-size:1.4rem">{B2B['guest'][0]}</h3><p class="lead">{B2B['guest'][1]}</p></div>
+</div>
 </div></section>
 
 <section><div class="wrap">
 <div class="sec-head"><span class="eyebrow">The B2B series</span><h2>The series so far</h2></div>
 <div class="timeline">{series}</div>
+<img class="photo" src="{B2B['series_img']}" alt="The Beginner to Business workshop poster, 24 October, 454 High Road, Bruce Grove, Tottenham" loading="lazy" style="margin-top:24px">
+<p class="caption">Beginner to Business, 24 October: the second chapter of the series.</p>
 </div></section>
 
 <section class="band"><div class="wrap faq">

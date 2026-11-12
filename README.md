@@ -27,6 +27,7 @@ The site's content is drawn faithfully from these documents:
 - **AGM (Initiation Meeting) Minutes** — 13 April 2026, signed by Chair, Secretary and Treasurer.
 - **Frontier Fusion 2026 poster** — flagship event, 15 May 2026, Encode Hub London.
 - **Builder to Business website update brief** — 6 November 2026: the event page, the home page block, the menu, registration on Luma, the copy fixes.
+- **Its asset pack** (`THI_B2B_Website_Assets.zip`) — the official flyer, the five speakers' headshots and cards, the special guest's invite, the Beginner to Business poster, the share image and the promo video (converted to 540 × 960 H.264 for the web; the original is 1080 × 1920).
 - **THI funding pitch** — October 2026: three speaker portraits, the partner logos, event and community photos, the B2B series so far.
 
 The signed originals are held by the committee and are available on

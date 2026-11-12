@@ -12,6 +12,8 @@ Checks the built site (website/) against the Builder to Business website update 
 5. The main menu has Builder to Business and not Age of Agents (which now sits under Programmes).
 6. The event page carries the brief's title, description and share image, and its event data parses.
 7. The footer links to X; Joseph Falano is named Cofounder; the home page names the 18 to 35 audience.
+8. The asset pack is in: every speaker has a headshot (no initials), the official flyer is on the event page and the
+   home page, and the promo video's source and poster exist, with the video fetched only when played.
 Prints SITE-CHECK-PASS or SITE-CHECK-FAIL and exits 0 or 1. Standard library only.
 """
 import html.parser, json, os, re, sys
@@ -27,6 +29,7 @@ class Page(html.parser.HTMLParser):
         super().__init__(convert_charrefs=True)
         self.copy, self.links, self.imgs, self.meta, self.ld = [], [], [], {}, []
         self.skip = 0; self.in_nav = False; self.nav = []; self.a = None; self.title = ""; self.in_title = False
+        self.videos = []
         self.in_ld = False
 
     def handle_starttag(self, tag, attrs):
@@ -41,6 +44,10 @@ class Page(html.parser.HTMLParser):
             self.a = [a.get("href", ""), ""]
         if tag == "img":
             self.imgs.append(a.get("src", "")); self.copy.append(("alt", a.get("alt", "")))
+        if tag == "video":
+            self.videos.append(a.get("preload", "")); self.imgs.append(a.get("poster", ""))
+        if tag == "source":
+            self.imgs.append(a.get("src", ""))
         if tag == "meta" and (a.get("name") or a.get("property")):
             self.meta[a.get("name") or a.get("property")] = a.get("content", "")
         if tag == "link" and a.get("rel") in ("icon", "apple-touch-icon"):
@@ -125,6 +132,18 @@ def main():
             bad.append("the event data does not parse")
         if sum(1 for h, t in e.links if h == REGISTER) < 3:
             bad.append("the event page has fewer than three Register links")
+    for f in ("index.html", "builder-to-business.html"):
+        p = parsed.get(f)
+        if p is None:
+            continue
+        if "assets/b2b-flyer.jpg" not in p.imgs:
+            bad.append(f"{f}: the official flyer is not on the page")
+        if not p.videos:
+            bad.append(f"{f}: the promo video is not on the page")
+        elif any(v != "none" for v in p.videos):
+            bad.append(f"{f}: a video is fetched before it is played (preload is not none)")
+    if e is not None and 'class="initials"' in open(os.path.join(SITE, "builder-to-business.html"), encoding="utf-8").read():
+        bad.append("builder-to-business.html: a speaker has initials, not a headshot")
     about = open(os.path.join(SITE, "about.html"), encoding="utf-8").read()
     if not re.search(r"cofounder", about, re.I) or "Joseph Falano" not in about:   # the card shows roles in capitals
         bad.append("the about page does not name Joseph Falano as Cofounder")
